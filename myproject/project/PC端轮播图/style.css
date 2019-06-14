@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.focus {
+    position: relative;
+    margin: 100px auto;
+    background-color: pink;
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    box-shadow: 0px 0px 8px 2px #fff;
+}
+
+.arrow-l {
+    position: absolute;
+    display: none;
+    width: 24px;
+    height: 40px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: center;
+    line-height: 40px;
+    left: 0;
+    top: 50%;
+    font-size: 18px;
+    background-color: rgba(22, 22, 22, 0.747);
+    color: #fff;
+    text-decoration: none;
+    z-index: 6;
+}
+
+.arrow-r {
+    position: absolute;
+    display: none;
+    width: 24px;
+    height: 40px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    right: 0;
+    top: 50%;
+    background-color: rgba(22, 22, 22, 0.747);
+    color: #fff;
+    text-decoration: none;
+    z-index: 6;
+
+}
+
+ol {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    z-index: 6;
+}
+
+ol li {
+    float: left;
+    width: 8px;
+    height: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    margin: 0 3px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 6;
+
+}
+
+.current {
+    background-color: #fff;
+}
+
+.focus ul {
+    width: 600%;
+    position: absolute;
+
+}
+
+.focus ul li {
+    float: left;
+}
