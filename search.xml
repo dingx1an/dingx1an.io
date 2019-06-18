@@ -813,25 +813,6 @@
     
     <entry>
       <title>本地存储</title>
-      <link href="/2019/05/14/2.webAPI/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%20-%20%E5%89%AF%E6%9C%AC/"/>
-      <url>/2019/05/14/2.webAPI/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%20-%20%E5%89%AF%E6%9C%AC/</url>
-      
-        <content type="html"><![CDATA[<h2 id="1-本地存储特性"><a href="#1-本地存储特性" class="headerlink" title="1.本地存储特性"></a>1.本地存储特性</h2><p>数据存储在用户浏览器中（不与服务器打交道）<br>设置读取方便，刷新也不会丢失</p><h2 id="2-window-sessionStorage"><a href="#2-window-sessionStorage" class="headerlink" title="2.window.sessionStorage"></a>2.window.sessionStorage</h2><p>1.生命周期为关闭浏览器窗口<br>2.存储在当前页面内存，只在同一个页面以下数据共享<br>3.以键值对形式存储<br>4.最大5M</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">存储： sessionStorage.setItem(<span class="string">'key'</span>,value)</span><br><span class="line">获取： sessionStorage.getItem(<span class="string">'key'</span>)</span><br><span class="line">删除： sessionStorage.removeItem(<span class="string">'key'</span>)</span><br><span class="line">删除所有: sessionStorage.clear()</span><br></pre></td></tr></table></figure><h2 id="3-window-localStorage"><a href="#3-window-localStorage" class="headerlink" title="3.window.localStorage"></a>3.window.localStorage</h2><p>1.存储到本地内存，不同页面也可以数据共享<br>2.最大20M<br>3.生命周期为永久<br>方法和sessionStorage完全类似</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> WebAPI </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>本地存储</title>
       <link href="/2019/05/14/2.webAPI/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8/"/>
       <url>/2019/05/14/2.webAPI/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8/</url>
       
