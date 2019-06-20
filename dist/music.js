@@ -21,43 +21,19 @@ const ap = new APlayer({
       theme: 'pink' //切换到此音频时的主题色，比上面的 theme 优先级高
     },
     {
-      name: '春夏秋冬',
-      artist: '张国荣',
-      url: 'http://music.163.com/song/media/outer/url?id=186453.mp3',
-      cover: 'https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/music.jpg',
-      lrc: '[00:00.00]',
-
-    },
-    {
-      name: '玉门关',
-      artist: '上海彩虹室内合唱团',
-      url: 'http://music.163.com/song/media/outer/url?id=1365898217.mp3',
-      cover: 'https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/music.jpg',
-      lrc: '[00:00.00]前奏很长...',
-
-    },
-    {
-      name: '男孩',
-      artist: '梁博',
-      url: 'http://music.163.com/song/media/outer/url?id=467952048.mp3',
-      cover: 'https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/music.jpg',
-      lrc: '[00:00.00]',
-
-    },
-    {
       name: '约定',
       artist: '王菲',
       url: 'http://music.163.com/song/media/outer/url?id=299116.mp3',
       cover: 'https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/music.jpg',
-      lrc: '[00:00.00]',
+      lrc: '[00:00.00]'
 
     },
     {
-      name: '大鱼',
-      artist: '周深',
-      url: 'http://music.163.com/song/media/outer/url?id=413812448.mp3',
+      name: '暧昧',
+      artist: '王菲',
+      url: 'http://music.163.com/song/media/outer/url?id=299981.mp3',
       cover: 'https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/music.jpg',
-      lrc: '[00:00.00]',
+      lrc: '[00:00.00]'
 
     },
     {
@@ -65,15 +41,15 @@ const ap = new APlayer({
       artist: '杨千嬅',
       url: 'http://music.163.com/song/media/outer/url?id=316510.mp3',
       cover: 'https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/music.jpg',
-      lrc: '[00:00.00]',
+      lrc: '[00:00.00]'
 
     },
     {
-      name: '风的季节',
-      artist: 'Soler',
-      url: 'http://music.163.com/song/media/outer/url?id=26584442.mp3',
+      name: '春夏秋冬',
+      artist: '张国荣',
+      url: 'http://music.163.com/song/media/outer/url?id=186453.mp3',
       cover: 'https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/music.jpg',
-      lrc: '[00:00.00]',
+      lrc: '[00:00.00]'
 
     },
     {
@@ -81,7 +57,7 @@ const ap = new APlayer({
       artist: 'Eagles',
       url: 'http://music.163.com/song/media/outer/url?id=26289183.mp3',
       cover: 'https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/music.jpg',
-      lrc: '[00:00.00]',
+      lrc: '[00:00.00]'
     }
 
   ]
