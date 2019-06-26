@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>文件上传</title>
+      <link href="/2019/06/26/0.tips/3.%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
+      <url>/2019/06/26/0.tips/3.%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-使用Jq插件上传"><a href="#1-使用Jq插件上传" class="headerlink" title="1.使用Jq插件上传"></a>1.使用Jq插件上传</h2><p>使用jQuery-fileupload插件<br>1.引入以下三个文件：</p><ul><li>jquery.ui.widget.js</li><li>jquery.iframe-transport.js</li><li>jquery.fileupload.js</li></ul><p>2.file表单元素设置<br><code>name=&#39;file&#39;</code><br><code>data-url=&quot;后台接口地址&quot;</code></p><p>3.js里对表单控件操作</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'#fileUpload'</span>).fileupload(&#123;</span><br><span class="line">    dataType: <span class="string">'json'</span>,</span><br><span class="line">    done: <span class="function"><span class="keyword">function</span> (<span class="params">e, data</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> imgUrl= data._response.result.picAddr;</span><br><span class="line">        $(<span class="string">"#showBrand"</span>).attr(<span class="string">"src"</span>,imgUrl);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><h2 id="2-使用ajax上传文件"><a href="#2-使用ajax上传文件" class="headerlink" title="2.使用ajax上传文件"></a>2.使用ajax上传文件</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#file"</span>).on(<span class="string">"change"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> file = <span class="keyword">this</span>.files[<span class="number">0</span>]; <span class="comment">//是一个对象 存储了此图片相关的信息</span></span><br><span class="line">        <span class="keyword">var</span> filedata = <span class="keyword">new</span> FormData(); <span class="comment">//是一个对象 类型为FormData</span></span><br><span class="line">        filedata.append(<span class="string">"file"</span>, file); <span class="comment">//往此对象内部添加图片相关信息</span></span><br><span class="line">        $.ajax(&#123;</span><br><span class="line">            type: <span class="string">"post"</span>,</span><br><span class="line">            url: <span class="string">"/category/addSecondCategoryPic"</span>,</span><br><span class="line">            data: filedata,</span><br><span class="line">            contentType: <span class="literal">false</span>, <span class="comment">//设置之后文件类型变为multipart/form-data</span></span><br><span class="line">            processData: <span class="literal">false</span>, <span class="comment">//不需要进行数据转换 用原格式发送</span></span><br><span class="line">            success: <span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">                brandLogo = res.picAddr;</span><br><span class="line">                $(<span class="string">".brandimg"</span>).attr(<span class="string">"src"</span>, brandLogo);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure><ul><li>contentType 类型：Boolean<br>作用是告诉服务器，浏览器发来了什么数据；一般情况下，我们不需要设置它。默认值为’application/x-www-form-urlencoded; charset=UTF-8’；<br>上传文件时，我们会将content-type设置成flase，这样在发送请求时，请求头里content-Type会变成multipart/form-data</li></ul><ul><li>processData  类型：Boolean<br>默认值: true。默认情况下，通过data选项传递进来的数据，如果是一个对象(技术上讲只要不是字符串)，都会处理转化成一个查询字符串，以配合默认内容类型 “application/x-www-form-urlencoded”。如果要发送 DOM 树信息或其它不希望转换的信息，设置为 false。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Tips </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Diary </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>浏览器touchmove事件存在的问题</title>
       <link href="/2019/06/21/8.diary/4.%E6%B5%8F%E8%A7%88%E5%99%A8touchmove%E4%BA%8B%E4%BB%B6%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98/"/>
       <url>/2019/06/21/8.diary/4.%E6%B5%8F%E8%A7%88%E5%99%A8touchmove%E4%BA%8B%E4%BB%B6%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98/</url>
