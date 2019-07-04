@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>nodeJs文件和路径API | ShawnLiu</title><meta name="description" content="nodeJs文件和路径API"><meta name="keywords" content="nodeJs"><meta name="author" content="ShawnLiu"><meta name="copyright" content="ShawnLiu"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="canonical" href="www.shawnliu.fun/2019/07/03/9.nodeJs/2.node文件和路径API/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="nodeJs文件和路径API"><meta name="twitter:description" content="nodeJs文件和路径API"><meta name="twitter:image" content="[&quot;https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/nodejs.jpg&quot;]"><meta property="og:type" content="article"><meta property="og:title" content="nodeJs文件和路径API"><meta property="og:url" content="www.shawnliu.fun/2019/07/03/9.nodeJs/2.node文件和路径API/"><meta property="og:site_name" content="ShawnLiu"><meta property="og:description" content="nodeJs文件和路径API"><meta property="og:image" content="[&quot;https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/nodejs.jpg&quot;]"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="prev" title="模块化思想介绍" href="/www.shawnliu.fun/2019/07/03/9.nodeJs/3.模块化思想介绍/"><link rel="next" title="前端面试题汇总" href="/www.shawnliu.fun/2019/07/02/0.tips/4.前端面试题/"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://shawnliu.fun/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight_copy: 'true',
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    title: '添加书签',
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  }
+  
+}</script></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、fs文件系统"><span class="toc-number">1.</span> <span class="toc-text">一、fs文件系统</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-引入fs模块"><span class="toc-number">1.1.</span> <span class="toc-text">1.引入fs模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-fs的文件操作"><span class="toc-number">1.2.</span> <span class="toc-text">2.fs的文件操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1）读取文件-fs-readFile"><span class="toc-number">1.2.1.</span> <span class="toc-text">1）读取文件 fs.readFile</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-写入文件-fs-writeFile"><span class="toc-number">1.2.2.</span> <span class="toc-text">2) 写入文件 fs.writeFile</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-追加写入文件-fs-appendFile"><span class="toc-number">1.2.3.</span> <span class="toc-text">3) 追加写入文件 fs.appendFile</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-复制文件-fs-copyFile"><span class="toc-number">1.2.4.</span> <span class="toc-text">4) 复制文件 fs.copyFile</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-删除文件-fs-unlinkFile"><span class="toc-number">1.2.5.</span> <span class="toc-text">5) 删除文件 fs.unlinkFile</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、Path路径操作"><span class="toc-number">2.</span> <span class="toc-text">二、Path路径操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-path-join-‘路径片段1’-’路径片段2’…"><span class="toc-number">2.1.</span> <span class="toc-text">1.path.join(‘路径片段1’,’路径片段2’…)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-path其他属性和方法"><span class="toc-number">2.2.</span> <span class="toc-text">2.path其他属性和方法</span></a></li></ol></li></ol></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/nodejs.jpg)"><div id="page-header"><span class="pull-left"> <a class="blog_title" id="site-name" href="/">ShawnLiu</a></span><div class="open toggle-menu pull-right"><div class="menu-icon-first"></div><div class="menu-icon-second"></div><div class="menu-icon-third"></div></div><span class="pull-right menus"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友人帐</span></a><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于/留言板</span></a><a class="site-page" href="/myproject/"><i class="fa-fw fa fa-grav"></i><span> 项目</span></a><script>document.body.addEventListener('touchstart', function(){ });</script></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></span></div><div id="post-info"><div id="post-title"><div class="posttitle">nodeJs文件和路径API</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2019-07-03<span class="post-meta__separator">|</span><i class="fa fa-history" aria-hidden="true"></i> 更新于 2019-07-03</time><span class="post-meta__separator mobile_hidden">|</span><span class="mobile_hidden"><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/nodeJs/">nodeJs</a></span><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">567</span><span class="post-meta__separator">|</span><span>阅读时长: 2 分钟</span><span class="post-meta__separator">|</span><span>阅读量: </span><span id="busuanzi_value_page_pv"></span></div></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><h1 id="一、fs文件系统"><a href="#一、fs文件系统" class="headerlink" title="一、fs文件系统"></a>一、fs文件系统</h1><p>fs 模块提供了一个 API，用于与文件系统进行交互。<br><a href="http://nodejs.cn/api/fs.html" target="_blank" rel="noopener">http://nodejs.cn/api/fs.html</a></p>
+<h2 id="1-引入fs模块"><a href="#1-引入fs模块" class="headerlink" title="1.引入fs模块"></a>1.引入fs模块</h2><p><code>const fs = require(&#39;fs&#39;)</code></p>
+<h2 id="2-fs的文件操作"><a href="#2-fs的文件操作" class="headerlink" title="2.fs的文件操作"></a>2.fs的文件操作</h2><p>以下四个方法都是异步进行的，想要改成同步的话在方法名后面添加Sync</p>
+<h3 id="1）读取文件-fs-readFile"><a href="#1）读取文件-fs-readFile" class="headerlink" title="1）读取文件 fs.readFile"></a>1）读取文件 fs.readFile</h3><pre><code>fs.readFile(&apos;读取文件的路径&apos;[,编码格式],回调函数)</code></pre><p>例如： <code>fs.readFile(&#39;1.txt&#39;,&#39;utf-8&#39;,function(err,data){})</code><br>err如果为null说明读取成功；err.message存放了失败时的错误信息<br>编码格式如果不写默认是null，读取出来是buffer16进制</p>
+<h3 id="2-写入文件-fs-writeFile"><a href="#2-写入文件-fs-writeFile" class="headerlink" title="2) 写入文件 fs.writeFile"></a>2) 写入文件 fs.writeFile</h3><pre><code>fs.writeFile(&apos;文件路径&apos;,&apos;要写入的内容&apos;[,编码格式],回调函数)</code></pre><p>例如：<code>fs.writeFile(&#39;1.txt&#39;,&#39;写入的内容&#39;,function(err){})</code><br>文件如果不存在，会新建一个；如果原来有内容会覆盖掉。<br>编码格式默认是utf-8 一般不设置</p>
+<h3 id="3-追加写入文件-fs-appendFile"><a href="#3-追加写入文件-fs-appendFile" class="headerlink" title="3) 追加写入文件 fs.appendFile"></a>3) 追加写入文件 fs.appendFile</h3><pre><code>fs.appendFile(&apos;文件路径&apos;,&apos;要追加的内容&apos;[,编码格式],回调函数)</code></pre><p>例如： <code>fs.appendFile(&#39;1.txt&#39;,&#39;追加的内容&#39;,function(err){})</code><br>文件如果不存在，会新建一个；不会覆盖掉原来的内容。<br>编码格式默认是utf-8 一般不设置</p>
+<h3 id="4-复制文件-fs-copyFile"><a href="#4-复制文件-fs-copyFile" class="headerlink" title="4) 复制文件 fs.copyFile"></a>4) 复制文件 fs.copyFile</h3><pre><code>fs.copyFile(&apos;原文件&apos;,&apos;目标文件&apos;[,flag],回调函数)</code></pre><p>flag一般不指定，是修饰符</p>
+<h3 id="5-删除文件-fs-unlinkFile"><a href="#5-删除文件-fs-unlinkFile" class="headerlink" title="5) 删除文件 fs.unlinkFile"></a>5) 删除文件 fs.unlinkFile</h3><pre><code>fs.unlinkFile(&apos;文件路径&apos;,回调函数)</code></pre><p>文件路径写相对路径时 可能会出现拼接问题<br>推荐使用__dirname：表示当前文件所处的文件夹路径<br>__dirname+”文件”</p>
+<h1 id="二、Path路径操作"><a href="#二、Path路径操作" class="headerlink" title="二、Path路径操作"></a>二、Path路径操作</h1><p><code>const path = require(&#39;path&#39;)</code></p>
+<h2 id="1-path-join-‘路径片段1’-’路径片段2’…"><a href="#1-path-join-‘路径片段1’-’路径片段2’…" class="headerlink" title="1.path.join(‘路径片段1’,’路径片段2’…)"></a>1.path.join(‘路径片段1’,’路径片段2’…)</h2><p>使用+号拼接需要考虑是否带./和/   容易出错<br>以后拼接路径时使用path.join方法配合__dirname<br>拼接的结果不带.<br>..会和上一级目录抵消掉</p>
+<h2 id="2-path其他属性和方法"><a href="#2-path其他属性和方法" class="headerlink" title="2.path其他属性和方法"></a>2.path其他属性和方法</h2><p>path.sep 返回平台特定的路径分隔符 Windows下是 \  Linux是 /<br>path.basename(paths,[ext]) 返回文件的名称，可以指定扩展名<br>path.dirname(paths) 返回文件的路径，不含文件名<br>path.extname(paths) 返回文件的扩展名</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">ShawnLiu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="/www.shawnliu.fun/2019/07/03/9.nodeJs/2.node文件和路径API/">www.shawnliu.fun/2019/07/03/9.nodeJs/2.node文件和路径API/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="www.shawnliu.fun">ShawnLiu</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/nodeJs/">nodeJs    </a></div><div class="post_share"><div class="social-share" data-image="[&quot;https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/nodejs.jpg&quot;]" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-buttom"><i class="fa fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lozad post-qr-code__img" data-src="/img/wechat.jpg"><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lozad post-qr-code__img" data-src="/img/alipay.jpg"><div class="post-qr-code__desc">支付宝</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull-left"><a href="/2019/07/03/9.nodeJs/3.模块化思想介绍/"><img class="prev_cover lozad" data-src="https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/nodejs.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">上一篇</div><div class="prev_info"><span>模块化思想介绍</span></div></a></div><div class="next-post pull-right"><a href="/2019/07/02/0.tips/4.前端面试题/"><img class="next_cover lozad" data-src="https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/cover.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">下一篇</div><div class="next_info"><span>前端面试题汇总</span></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headling"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>&nbsp;相關文章</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/2019/07/04/9.nodeJs/7.Express框架/"><img class="relatedPosts_cover lozad" data-src="https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/nodejs.jpg"><div class="relatedPosts_title">基于node的Express框架</div></a></div><div class="relatedPosts_item"><a href="/2019/07/04/9.nodeJs/6.使用node构建web服务器/"><img class="relatedPosts_cover lozad" data-src="https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/nodejs.jpg"><div class="relatedPosts_title">使用node构建web服务器</div></a></div><div class="relatedPosts_item"><a href="/2019/07/03/9.nodeJs/5.NPM/"><img class="relatedPosts_cover lozad" data-src="https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/nodejs.jpg"><div class="relatedPosts_title">npm</div></a></div><div class="relatedPosts_item"><a href="/2019/07/03/9.nodeJs/4.node模块和包介绍/"><img class="relatedPosts_cover lozad" data-src="https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/nodejs.jpg"><div class="relatedPosts_title">node模块和包介绍</div></a></div><div class="relatedPosts_item"><a href="/2019/07/03/9.nodeJs/3.模块化思想介绍/"><img class="relatedPosts_cover lozad" data-src="https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/nodejs.jpg"><div class="relatedPosts_title">模块化思想介绍</div></a></div><div class="relatedPosts_item"><a href="/2019/07/01/9.nodeJs/1.nodeJS介绍和ES6语法/"><img class="relatedPosts_cover lozad" data-src="https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/nodejs.jpg"><div class="relatedPosts_title">nodeJs介绍和ES6语法</div></a></div></div><div class="clear_both"></div></div><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i> <span>评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = 'true' == true ? true : false;
+var verify = 'true' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+
+var localeName = 'tw',
+localeMode = {
+    head: {
+        nick: '昵称(必填)',
+        mail: '邮箱(必填,可以收到回复提醒)',
+        link: '网址(选填)',
+    },
+    tips: {
+        comments: '评论',
+        sofa: '快來做第一个评论的人吧~',
+        busy: '还在提交中，请稍候...',
+        again: '这么简单也能错，也是沒谁了.'
+    },
+    ctrl: {
+        reply: '回复',
+        ok: '好的',
+        sure: '确认',
+        cancel: '取消',
+        confirm: '确认',
+        continue: '继续',
+        more: '查看更多...',
+        try: '再试试?',
+        preview: '预览',
+        emoji: '表情'
+    },
+    error: {
+        99: '初始化失敗，请检查init中的`el`元素.',
+        100: '初始化失敗，请检查你的AppId和AppKey.',
+        401: '未经授权的操作，请检查你的AppId和AppKey.',
+        403: '访问被api域名白名单拒绝，请检查你的安全域名設置.',
+    },
+    timeago: {
+        seconds: '秒前',
+        minutes: '分钟前',
+        hours: '小时前',
+        days: '天前',
+        now: '刚刚'
+    }
+};
+
+window.valine = new Valine();
+valine.installLocale(localeName,localeMode);
+
+valine.init({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'q5bYO5Icw8iYbOAIqd4C4wYl-gzGzoHsz',
+  appKey:'oWC07CBWz2YkiLVCtCp8EGIx',
+  placeholder:'请留下你的邮箱，博主会第一时间回复哒',
+  avatar:'mp',
+  guest_info:guest_info,
+  pageSize:'10',
+  lang:'zh-cn',
+  visitor: true
+});</script></div></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2019 By ShawnLiu</div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><section class="rightside" id="rightside"><i class="fa fa-book" id="readmode" title="阅读模式"> </i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换">繁</a><i class="fa fa-moon-o nightshift" id="nightshift" title="夜间模式"></i></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/baidupush.js"></script><script async src="/js/search/local-search.js"></script><script src="/js/nightshift.js"></script><script id="ribbon" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/js/piao.js"></script><script src="/js/tw_cn.js"></script><script>translateInitilization()
+
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@1.2.2/instantpage.min.js" type="module"></script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html><script src="/live2d-widget/autoload.js"></script>
