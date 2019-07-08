@@ -19,23 +19,23 @@
 <h2 id="2-函数"><a href="#2-函数" class="headerlink" title="2.函数"></a>2.函数</h2><p>封装了一块可以被重复执行调用的代码块,对外只提供一个简单的函数接口</p>
 <h1 id="二、函数的使用"><a href="#二、函数的使用" class="headerlink" title="二、函数的使用"></a>二、函数的使用</h1><p>两个步骤：</p>
 <h2 id="1-声明函数"><a href="#1-声明函数" class="headerlink" title="1.声明函数"></a>1.声明函数</h2><p>方式1    </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function 函数名() &#123;</span><br><span class="line">	函数体；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function 函数名() &#123;</span><br><span class="line">	函数体；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>方式2</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var 函数名 = function()&#123;</span><br><span class="line">	函数体；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var 函数名 = function()&#123;</span><br><span class="line">	函数体；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>调用时    fn();<br>fn是变量名 不是函数名<br>函数表达式也可以传递参数</p>
 <p>函数名一般是动词，驼峰命名法；</p>
 <h2 id="2-调用函数"><a href="#2-调用函数" class="headerlink" title="2.调用函数"></a>2.调用函数</h2><p>函数名();</p>
 <p>函数不调用，自己不执行；</p>
 <h1 id="三、函数的参数"><a href="#三、函数的参数" class="headerlink" title="三、函数的参数"></a>三、函数的参数</h1><p>形参和实参<br>声明：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function 函数名（形参1，形参2...）&#123;</span><br><span class="line">	函数体；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function 函数名（形参1，形参2...）&#123;</span><br><span class="line">	函数体；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>调用：<br>    <code>函数名(实参1，实参2...);</code></p>
 <p>形参是接收实参的，类似于变量；<br>函数的参数可有可无，数量不限；</p>
 <p>形参和实参个数关系：<br>    个数相等：一一匹配；<br>    实参个数 &gt; 形参个数：舍弃多余的实参；<br>    实参个数 &lt; 形参个数：没有接收到值的形参是undifined；</p>
 <h1 id="四、函数的返回值"><a href="#四、函数的返回值" class="headerlink" title="四、函数的返回值"></a>四、函数的返回值</h1><h2 id="1-return语句"><a href="#1-return语句" class="headerlink" title="1.return语句"></a>1.return语句</h2><p>声明：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function 函数名() &#123;</span><br><span class="line">	函数体；</span><br><span class="line">	return 需要返回的值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function 函数名() &#123;</span><br><span class="line">	函数体；</span><br><span class="line">	return 需要返回的值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>调用：<br>    <code>函数名();</code></p>
 <p>函数体内不应该写输出语句<br>使用return把函数结果返回给调用者，即 函数名() = 返回的值；</p>

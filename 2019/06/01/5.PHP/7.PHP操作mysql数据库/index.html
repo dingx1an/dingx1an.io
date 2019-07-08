@@ -35,7 +35,7 @@ type:限制生成的数组类型，取值有
     MYSQLI_ASSOC 只生成关联数组
     MYSQLI_BOTH 同时生成两种数组</code></pre></li>
 <li><code>mysqli_fetch_assoc($res)</code> 只生成关联数组</li>
-<li><code>mysqli_fetch_row($res)</code> 只生成索引数组<br>如果没有读取到数据则返回空;<br>上面的函数都只能读取第一行，但是会自动将指针移动到下一行；<br>想要读取所有数据，需要使用while循环：把数据添加到$data里<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>($arr = mysqli_fetch_array($res,MYSQL_NUM))&#123;</span><br><span class="line">	$result[]= $arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><code>mysqli_fetch_row($res)</code> 只生成索引数组<br>如果没有读取到数据则返回空;<br>上面的函数都只能读取第一行，但是会自动将指针移动到下一行；<br>想要读取所有数据，需要使用while循环：把数据添加到$data里<figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">while</span>($arr = mysqli_fetch_array($res,MYSQL_NUM))&#123;</span><br><span class="line">	$result[]= $arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
