@@ -229,7 +229,7 @@ table td {
   font-size: 1.1rem;
 }
 #vcomment .vnick {
-  font-size: 100%;
+  font-size: 0.65rem;
 }
 #vcomment .vsys {
   font-size: 70%;
@@ -237,8 +237,8 @@ table td {
 #vcomment .vtime {
   font-size: 0.65rem;
 }
-#vcomment .vcontent {
-  font-size: 100%;
+#vcomment #vcomment .vcontent {
+  font-size: 0.65rem;
 }
 #vcomment .vat {
   font-size: 0.7125rem;

@@ -29,9 +29,9 @@ const ap = new APlayer({
 
     },
     {
-      name: '暧昧',
-      artist: '王菲',
-      url: 'http://music.163.com/song/media/outer/url?id=299981.mp3',
+      name: '倾城',
+      artist: '许美静',
+      url: 'http://music.163.com/song/media/outer/url?id=306709.mp3',
       cover: 'https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/music.jpg',
       lrc: '[00:00.00]'
 
@@ -45,12 +45,25 @@ const ap = new APlayer({
 
     },
     {
+      name: '撕夜',
+      artist: '阿杜',
+      url: 'http://music.163.com/song/media/outer/url?id=60274.mp3',
+      cover: 'https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/music.jpg',
+      lrc: '[00:00.00]'
+    },
+    {
       name: '春夏秋冬',
       artist: '张国荣',
       url: 'http://music.163.com/song/media/outer/url?id=186453.mp3',
       cover: 'https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/music.jpg',
       lrc: '[00:00.00]'
-
+    },
+    {
+      name: 'On a slow boat to China',
+      artist: 'Luke Thompson',
+      url: 'http://music.163.com/song/media/outer/url?id=27591140.mp3',
+      cover: 'https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/music.jpg',
+      lrc: '[00:00.00]'
     },
     {
       name: 'Hotel California',
@@ -59,6 +72,5 @@ const ap = new APlayer({
       cover: 'https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/music.jpg',
       lrc: '[00:00.00]'
     }
-
   ]
 });
