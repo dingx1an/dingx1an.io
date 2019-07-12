@@ -2,9 +2,478 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>www.shawnliu.fun/2019/07/03/9.nodeJs/2.node%E6%96%87%E4%BB%B6%E5%92%8C%E8%B7%AF%E5%BE%84API/</loc>
+    <loc>www.shawnliu.fun/2019/03/28/0.tips/5.%E6%B5%8F%E8%A7%88%E5%99%A8touchmove%E4%BA%8B%E4%BB%B6%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
     
-    <lastmod>2019-07-09T08:14:24.311Z</lastmod>
+    <lastmod>2019-07-12T10:29:29.168Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2019/03/26/0.tips/3.%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/</loc>
+    
+    <lastmod>2019-07-12T10:29:06.654Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2019/03/10/0.tips/2.%E5%89%8D%E7%AB%AF%E7%94%9F%E8%AF%8D%E6%9C%AC/</loc>
+    
+    <lastmod>2019-07-12T10:28:58.657Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2019/03/10/0.tips/1.%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/</loc>
+    
+    <lastmod>2019-07-12T10:28:51.871Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2019/05/12/9.nodeJs/8.ExpressCRUD%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE/</loc>
+    
+    <lastmod>2019-07-12T10:26:26.221Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/08/03/3.jquery/7.jquery%E6%8F%92%E4%BB%B6%E5%92%8C%E5%85%B6%E4%BB%96%E6%96%B9%E6%B3%95/</loc>
+    
+    <lastmod>2019-07-12T10:25:13.259Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2019/05/03/9.nodeJs/3.%E6%A8%A1%E5%9D%97%E5%8C%96%E6%80%9D%E6%83%B3%E4%BB%8B%E7%BB%8D/</loc>
+    
+    <lastmod>2019-07-12T07:58:19.447Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2019/05/03/9.nodeJs/2.node%E6%96%87%E4%BB%B6%E5%92%8C%E8%B7%AF%E5%BE%84API/</loc>
+    
+    <lastmod>2019-07-12T07:58:19.447Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2019/05/04/9.nodeJs/6.%E4%BD%BF%E7%94%A8node%E6%9E%84%E5%BB%BAweb%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    
+    <lastmod>2019-07-12T07:58:19.446Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2019/05/04/9.nodeJs/7.Express%E6%A1%86%E6%9E%B6/</loc>
+    
+    <lastmod>2019-07-12T07:58:19.446Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2019/05/03/9.nodeJs/5.NPM/</loc>
+    
+    <lastmod>2019-07-12T07:58:19.446Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2019/05/01/9.nodeJs/1.nodeJS%E4%BB%8B%E7%BB%8D%E5%92%8CES6%E8%AF%AD%E6%B3%95/</loc>
+    
+    <lastmod>2019-07-12T07:58:19.446Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2019/05/03/9.nodeJs/4.node%E6%A8%A1%E5%9D%97%E5%92%8C%E5%8C%85%E4%BB%8B%E7%BB%8D/</loc>
+    
+    <lastmod>2019-07-12T07:58:19.446Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2019/04/16/8.diary/3.Hexo%E5%8D%9A%E5%AE%A2%E4%B8%AA%E6%80%A7%E5%8C%96%E5%AE%9A%E5%88%B6/</loc>
+    
+    <lastmod>2019-07-12T07:56:20.883Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2019/04/16/8.diary/2.Hexo+Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/</loc>
+    
+    <lastmod>2019-07-12T07:56:15.513Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2019/03/15/8.diary/1.%E5%9B%BE%E5%BA%8A%E4%BB%8E%E4%B8%83%E7%89%9B%E4%BA%91%E6%9B%BF%E6%8D%A2%E5%88%B0%E8%85%BE%E8%AE%AF/</loc>
+    
+    <lastmod>2019-07-12T07:56:12.379Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2018/07/08/7.AJAX/3.%E5%90%8C%E6%BA%90%E5%92%8C%E8%B7%A8%E5%9F%9F/</loc>
+    
+    <lastmod>2019-07-12T07:54:41.584Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2018/07/04/7.AJAX/2.%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</loc>
+    
+    <lastmod>2019-07-12T07:54:35.478Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2018/07/03/7.AJAX/1.ajax%E7%BC%96%E7%A8%8B/</loc>
+    
+    <lastmod>2019-07-12T07:54:16.232Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2018/06/01/6.%E5%8F%A4%E6%96%87/%E5%89%8D%E8%B5%A4%E5%A3%81%E8%B5%8B/</loc>
+    
+    <lastmod>2019-07-12T07:52:31.008Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2018/05/27/6.%E5%8F%A4%E6%96%87/%E6%BB%95%E7%8E%8B%E9%98%81%E5%BA%8F/</loc>
+    
+    <lastmod>2019-07-12T07:51:53.510Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2018/05/27/5.PHP/2.2.%E9%9F%B3%E4%B9%90%E5%88%97%E8%A1%A8%E6%A1%88%E4%BE%8B/</loc>
+    
+    <lastmod>2019-07-12T07:48:56.635Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2018/06/01/5.PHP/7.PHP%E6%93%8D%E4%BD%9Cmysql%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    
+    <lastmod>2019-07-12T07:48:56.630Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2018/05/27/5.PHP/3.PHP%E6%B3%A8%E5%86%8C%E6%A1%88%E4%BE%8B%E6%BA%90%E7%A0%81/</loc>
+    
+    <lastmod>2019-07-12T07:48:56.625Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2018/05/27/5.PHP/2.1.GET%E5%92%8CPOST%E6%96%B9%E6%B3%95/</loc>
+    
+    <lastmod>2019-07-12T07:48:56.625Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2018/05/29/5.PHP/5.cookie%E5%92%8Csession/</loc>
+    
+    <lastmod>2019-07-12T07:48:56.624Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2018/05/25/5.PHP/1.PHP%E4%BB%8B%E7%BB%8D%E5%92%8C%E7%89%B9%E6%80%A7/</loc>
+    
+    <lastmod>2019-07-12T07:48:56.624Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2018/05/29/5.PHP/4.HTTP%E5%8D%8F%E8%AE%AE/</loc>
+    
+    <lastmod>2019-07-12T07:48:56.624Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2018/06/01/5.PHP/6.MySQL/</loc>
+    
+    <lastmod>2019-07-12T07:48:56.624Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/12/20/4.js%E9%AB%98%E7%BA%A7/14.%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
+    
+    <lastmod>2019-07-12T07:47:37.237Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/12/20/4.js%E9%AB%98%E7%BA%A7/13.%E9%97%AD%E5%8C%85%E9%80%92%E5%BD%92%E5%92%8C%E5%AF%B9%E8%B1%A1%E6%8B%B7%E8%B4%9D/</loc>
+    
+    <lastmod>2019-07-12T07:47:37.237Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/12/20/4.js%E9%AB%98%E7%BA%A7/12.%E5%87%BD%E6%95%B0%E9%AB%98%E7%BA%A7/</loc>
+    
+    <lastmod>2019-07-12T07:47:37.237Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/12/01/4.js%E9%AB%98%E7%BA%A7/8.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%92%8C%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/</loc>
+    
+    <lastmod>2019-07-12T07:47:17.870Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/12/01/4.js%E9%AB%98%E7%BA%A7/9.%E5%8E%9F%E5%9E%8B/</loc>
+    
+    <lastmod>2019-07-12T07:47:17.861Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/12/01/4.js%E9%AB%98%E7%BA%A7/11.js%E7%BB%A7%E6%89%BF/</loc>
+    
+    <lastmod>2019-07-12T07:47:17.861Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/12/01/4.js%E9%AB%98%E7%BA%A7/10.%E8%87%AA%E8%B0%83%E7%94%A8%E5%87%BD%E6%95%B0/</loc>
+    
+    <lastmod>2019-07-12T07:47:17.861Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/08/02/3.jquery/6.jquery%E4%BA%8B%E4%BB%B6/</loc>
+    
+    <lastmod>2019-07-12T07:46:20.136Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/08/02/3.jquery/5.jquery%E5%B0%BA%E5%AF%B8%E5%92%8C%E4%BD%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/</loc>
+    
+    <lastmod>2019-07-12T07:46:20.136Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/08/02/3.jquery/4.jquery%E6%93%8D%E4%BD%9C/</loc>
+    
+    <lastmod>2019-07-12T07:46:20.135Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/08/02/3.jquery/3.jquery%E5%8A%A8%E7%94%BB/</loc>
+    
+    <lastmod>2019-07-12T07:46:20.135Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/08/02/3.jquery/2.jquery%E9%80%89%E6%8B%A9%E5%99%A8/</loc>
+    
+    <lastmod>2019-07-12T07:46:20.135Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/08/02/3.jquery/1.jquery%E7%AE%80%E4%BB%8B/</loc>
+    
+    <lastmod>2019-07-12T07:46:14.593Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/06/20/2.webAPI/DOM/6.%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7/</loc>
+    
+    <lastmod>2019-07-12T07:44:56.863Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/06/20/2.webAPI/%E7%BD%91%E9%A1%B5%E7%89%B9%E6%95%88%E6%A1%88%E4%BE%8B/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%BD%91%E9%A1%B5%E7%89%B9%E6%95%88%E6%A1%88%E4%BE%8B/</loc>
+    
+    <lastmod>2019-07-12T07:44:56.848Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/06/20/2.webAPI/%E7%BD%91%E9%A1%B5%E7%89%B9%E6%95%88%E6%A1%88%E4%BE%8B/PC%E7%AB%AF%E7%BD%91%E9%A1%B5%E7%89%B9%E6%95%88%E6%A1%88%E4%BE%8B/</loc>
+    
+    <lastmod>2019-07-12T07:44:56.848Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/06/20/2.webAPI/DOM/9.%E5%B8%B8%E7%94%A8%E9%BC%A0%E6%A0%87%E5%92%8C%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6/</loc>
+    
+    <lastmod>2019-07-12T07:44:56.848Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/06/20/2.webAPI/DOM/7.%E8%8A%82%E7%82%B9%E5%92%8C%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C/</loc>
+    
+    <lastmod>2019-07-12T07:44:56.848Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/06/20/2.webAPI/DOM/8.%E4%BA%8B%E4%BB%B6%E9%AB%98%E7%BA%A7/</loc>
+    
+    <lastmod>2019-07-12T07:44:56.848Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/06/20/2.webAPI/DOM/5.%E6%8E%92%E4%BB%96%E6%80%9D%E6%83%B3/</loc>
+    
+    <lastmod>2019-07-12T07:44:56.848Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/06/20/2.webAPI/DOM/1.API%E5%92%8CDOM%E6%A6%82%E5%BF%B5/</loc>
+    
+    <lastmod>2019-07-12T07:44:56.847Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/06/20/2.webAPI/BOM/1.BOM%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%B8%B8%E7%94%A8%E4%BA%8B%E4%BB%B6/</loc>
+    
+    <lastmod>2019-07-12T07:44:56.847Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/06/20/2.webAPI/BOM/3.BOM%E4%B8%89%E5%A4%A7%E7%B3%BB%E5%88%97/</loc>
+    
+    <lastmod>2019-07-12T07:44:56.847Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/06/20/2.webAPI/BOM/4.JS%E7%9A%84%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6/</loc>
+    
+    <lastmod>2019-07-12T07:44:56.847Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/06/20/2.webAPI/BOM/5.JS%E5%8A%A8%E7%94%BB%E5%87%BD%E6%95%B0/</loc>
+    
+    <lastmod>2019-07-12T07:44:56.847Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/06/20/2.webAPI/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8/</loc>
+    
+    <lastmod>2019-07-12T07:44:56.847Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/06/20/2.webAPI/DOM/4.DOM%E5%85%83%E7%B4%A0%E6%93%8D%E4%BD%9C/</loc>
+    
+    <lastmod>2019-07-12T07:44:56.847Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/06/20/2.webAPI/DOM/3.DOM%E5%85%83%E7%B4%A0%E8%8E%B7%E5%8F%96/</loc>
+    
+    <lastmod>2019-07-12T07:44:56.847Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/06/20/2.webAPI/DOM/2.%E4%BA%8B%E4%BB%B6%E5%9F%BA%E7%A1%80/</loc>
+    
+    <lastmod>2019-07-12T07:44:56.847Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/06/20/2.webAPI/BOM/2.BOM%E4%B8%89%E5%A4%A7%E5%AF%B9%E8%B1%A1/</loc>
+    
+    <lastmod>2019-07-12T07:44:56.847Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/05/13/1.js%E5%9F%BA%E7%A1%80/1.%E5%8F%98%E9%87%8F%E5%92%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</loc>
+    
+    <lastmod>2019-07-12T07:43:24.420Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/05/13/1.js%E5%9F%BA%E7%A1%80/9.%E7%AE%80%E5%8D%95%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%A4%8D%E6%9D%82%E7%B1%BB%E5%9E%8B/</loc>
+    
+    <lastmod>2019-07-12T07:43:17.532Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/05/13/1.js%E5%9F%BA%E7%A1%80/8.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/</loc>
+    
+    <lastmod>2019-07-12T07:43:17.532Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/05/13/1.js%E5%9F%BA%E7%A1%80/7.%E5%AF%B9%E8%B1%A1/</loc>
+    
+    <lastmod>2019-07-12T07:43:17.532Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/05/13/1.js%E5%9F%BA%E7%A1%80/3.js%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/</loc>
+    
+    <lastmod>2019-07-12T07:43:17.532Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/05/13/1.js%E5%9F%BA%E7%A1%80/6.%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E9%A2%84%E8%A7%A3%E6%9E%90/</loc>
+    
+    <lastmod>2019-07-12T07:43:17.531Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/05/13/1.js%E5%9F%BA%E7%A1%80/5.%E5%87%BD%E6%95%B0/</loc>
+    
+    <lastmod>2019-07-12T07:43:17.531Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/05/13/1.js%E5%9F%BA%E7%A1%80/4.%E6%95%B0%E7%BB%84/</loc>
+    
+    <lastmod>2019-07-12T07:43:17.531Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.shawnliu.fun/2017/05/13/1.js%E5%9F%BA%E7%A1%80/2.js%E8%BF%90%E7%AE%97%E7%AC%A6/</loc>
+    
+    <lastmod>2019-07-12T07:43:17.531Z</lastmod>
     
   </url>
   
@@ -12,461 +481,6 @@
     <loc>www.shawnliu.fun/2019/07/02/0.tips/4.%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/</loc>
     
     <lastmod>2019-07-08T01:53:50.488Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/06/04/7.AJAX/2.%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</loc>
-    
-    <lastmod>2019-07-07T08:19:24.477Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/06/16/8.diary/2.Hexo+Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/</loc>
-    
-    <lastmod>2019-07-07T02:21:28.227Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/07/04/9.nodeJs/7.Express%E6%A1%86%E6%9E%B6/</loc>
-    
-    <lastmod>2019-07-06T12:48:36.153Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/06/10/0.tips/1.%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/</loc>
-    
-    <lastmod>2019-07-06T11:54:55.327Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/07/03/9.nodeJs/4.node%E6%A8%A1%E5%9D%97%E5%92%8C%E5%8C%85%E4%BB%8B%E7%BB%8D/</loc>
-    
-    <lastmod>2019-07-06T11:09:41.071Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/07/04/9.nodeJs/6.%E4%BD%BF%E7%94%A8node%E6%9E%84%E5%BB%BAweb%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
-    
-    <lastmod>2019-07-04T11:40:36.593Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/07/03/9.nodeJs/5.NPM/</loc>
-    
-    <lastmod>2019-07-03T10:59:57.948Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/07/03/9.nodeJs/3.%E6%A8%A1%E5%9D%97%E5%8C%96%E6%80%9D%E6%83%B3%E4%BB%8B%E7%BB%8D/</loc>
-    
-    <lastmod>2019-07-03T10:46:06.585Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/07/01/9.nodeJs/1.nodeJS%E4%BB%8B%E7%BB%8D%E5%92%8CES6%E8%AF%AD%E6%B3%95/</loc>
-    
-    <lastmod>2019-07-03T10:31:16.701Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/06/08/7.AJAX/3.%E5%90%8C%E6%BA%90%E5%92%8C%E8%B7%A8%E5%9F%9F/</loc>
-    
-    <lastmod>2019-07-02T07:36:28.976Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/27/6.%E5%8F%A4%E6%96%87/%E6%BB%95%E7%8E%8B%E9%98%81%E5%BA%8F/</loc>
-    
-    <lastmod>2019-07-01T11:41:04.635Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/06/26/0.tips/3.%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/</loc>
-    
-    <lastmod>2019-06-26T12:31:02.685Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/06/21/8.diary/4.%E6%B5%8F%E8%A7%88%E5%99%A8touchmove%E4%BA%8B%E4%BB%B6%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
-    
-    <lastmod>2019-06-21T12:28:17.624Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/16/3.jquery/2.jquery%E9%80%89%E6%8B%A9%E5%99%A8/</loc>
-    
-    <lastmod>2019-06-21T06:10:39.030Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/06/16/8.diary/3.Hexo%E5%8D%9A%E5%AE%A2%E4%B8%AA%E6%80%A7%E5%8C%96%E5%AE%9A%E5%88%B6/</loc>
-    
-    <lastmod>2019-06-16T09:33:24.147Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/06/15/8.diary/1.%E5%9B%BE%E5%BA%8A%E4%BB%8E%E4%B8%83%E7%89%9B%E4%BA%91%E6%9B%BF%E6%8D%A2%E5%88%B0%E8%85%BE%E8%AE%AF/</loc>
-    
-    <lastmod>2019-06-15T11:48:55.413Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/06/01/5.PHP/7.PHP%E6%93%8D%E4%BD%9Cmysql%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
-    
-    <lastmod>2019-06-15T11:46:06.548Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/06/01/5.PHP/6.MySQL/</loc>
-    
-    <lastmod>2019-06-15T11:45:48.599Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/14/2.webAPI/BOM/1.BOM%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%B8%B8%E7%94%A8%E4%BA%8B%E4%BB%B6/</loc>
-    
-    <lastmod>2019-06-15T09:06:25.549Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/14/2.webAPI/DOM/1.API%E5%92%8CDOM%E6%A6%82%E5%BF%B5/</loc>
-    
-    <lastmod>2019-06-15T09:06:22.019Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/14/2.webAPI/BOM/3.BOM%E4%B8%89%E5%A4%A7%E7%B3%BB%E5%88%97/</loc>
-    
-    <lastmod>2019-06-15T09:06:22.005Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/14/2.webAPI/%E7%BD%91%E9%A1%B5%E7%89%B9%E6%95%88%E6%A1%88%E4%BE%8B/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%BD%91%E9%A1%B5%E7%89%B9%E6%95%88%E6%A1%88%E4%BE%8B/</loc>
-    
-    <lastmod>2019-06-15T09:06:22.005Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/14/2.webAPI/%E7%BD%91%E9%A1%B5%E7%89%B9%E6%95%88%E6%A1%88%E4%BE%8B/PC%E7%AB%AF%E7%BD%91%E9%A1%B5%E7%89%B9%E6%95%88%E6%A1%88%E4%BE%8B/</loc>
-    
-    <lastmod>2019-06-15T09:06:22.005Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/14/2.webAPI/DOM/5.%E6%8E%92%E4%BB%96%E6%80%9D%E6%83%B3/</loc>
-    
-    <lastmod>2019-06-15T09:06:22.005Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/14/2.webAPI/BOM/5.JS%E5%8A%A8%E7%94%BB%E5%87%BD%E6%95%B0/</loc>
-    
-    <lastmod>2019-06-15T09:06:22.005Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/14/2.webAPI/BOM/4.JS%E7%9A%84%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6/</loc>
-    
-    <lastmod>2019-06-15T09:06:22.005Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/14/2.webAPI/BOM/2.BOM%E4%B8%89%E5%A4%A7%E5%AF%B9%E8%B1%A1/</loc>
-    
-    <lastmod>2019-06-15T09:06:22.004Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/14/2.webAPI/DOM/8.%E4%BA%8B%E4%BB%B6%E9%AB%98%E7%BA%A7/</loc>
-    
-    <lastmod>2019-06-15T09:02:14.511Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/14/2.webAPI/DOM/9.%E5%B8%B8%E7%94%A8%E9%BC%A0%E6%A0%87%E5%92%8C%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6/</loc>
-    
-    <lastmod>2019-06-15T09:02:14.511Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/14/2.webAPI/DOM/6.%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7/</loc>
-    
-    <lastmod>2019-06-15T09:02:14.510Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/14/2.webAPI/DOM/4.DOM%E5%85%83%E7%B4%A0%E6%93%8D%E4%BD%9C/</loc>
-    
-    <lastmod>2019-06-15T09:02:14.510Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/14/2.webAPI/DOM/7.%E8%8A%82%E7%82%B9%E5%92%8C%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C/</loc>
-    
-    <lastmod>2019-06-15T09:02:14.510Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/14/2.webAPI/DOM/3.DOM%E5%85%83%E7%B4%A0%E8%8E%B7%E5%8F%96/</loc>
-    
-    <lastmod>2019-06-15T09:02:14.509Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/14/2.webAPI/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8/</loc>
-    
-    <lastmod>2019-06-15T09:02:14.508Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/14/2.webAPI/DOM/2.%E4%BA%8B%E4%BB%B6%E5%9F%BA%E7%A1%80/</loc>
-    
-    <lastmod>2019-06-15T09:02:14.508Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/13/1.js%E5%9F%BA%E7%A1%80/3.js%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/</loc>
-    
-    <lastmod>2019-06-15T08:56:30.917Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/13/1.js%E5%9F%BA%E7%A1%80/8.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/</loc>
-    
-    <lastmod>2019-06-15T08:56:30.902Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/13/1.js%E5%9F%BA%E7%A1%80/2.js%E8%BF%90%E7%AE%97%E7%AC%A6/</loc>
-    
-    <lastmod>2019-06-15T08:56:30.902Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/13/1.js%E5%9F%BA%E7%A1%80/1.%E5%8F%98%E9%87%8F%E5%92%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</loc>
-    
-    <lastmod>2019-06-15T08:56:30.902Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/13/1.js%E5%9F%BA%E7%A1%80/4.%E6%95%B0%E7%BB%84/</loc>
-    
-    <lastmod>2019-06-15T08:56:30.902Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/13/1.js%E5%9F%BA%E7%A1%80/5.%E5%87%BD%E6%95%B0/</loc>
-    
-    <lastmod>2019-06-15T08:56:30.902Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/13/1.js%E5%9F%BA%E7%A1%80/6.%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E9%A2%84%E8%A7%A3%E6%9E%90/</loc>
-    
-    <lastmod>2019-06-15T08:56:30.902Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/13/1.js%E5%9F%BA%E7%A1%80/9.%E7%AE%80%E5%8D%95%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%A4%8D%E6%9D%82%E7%B1%BB%E5%9E%8B/</loc>
-    
-    <lastmod>2019-06-15T08:56:30.902Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/13/1.js%E5%9F%BA%E7%A1%80/7.%E5%AF%B9%E8%B1%A1/</loc>
-    
-    <lastmod>2019-06-15T08:56:30.902Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/22/4.js%E9%AB%98%E7%BA%A7/14.%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
-    
-    <lastmod>2019-06-15T08:49:48.586Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/22/4.js%E9%AB%98%E7%BA%A7/13.%E9%97%AD%E5%8C%85%E9%80%92%E5%BD%92%E5%92%8C%E5%AF%B9%E8%B1%A1%E6%8B%B7%E8%B4%9D/</loc>
-    
-    <lastmod>2019-06-15T08:49:48.586Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/19/4.js%E9%AB%98%E7%BA%A7/10.%E8%87%AA%E8%B0%83%E7%94%A8%E5%87%BD%E6%95%B0/</loc>
-    
-    <lastmod>2019-06-15T08:49:48.579Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/19/4.js%E9%AB%98%E7%BA%A7/9.%E5%8E%9F%E5%9E%8B/</loc>
-    
-    <lastmod>2019-06-15T08:49:48.579Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/19/4.js%E9%AB%98%E7%BA%A7/8.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%92%8C%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/</loc>
-    
-    <lastmod>2019-06-15T08:49:48.579Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/22/4.js%E9%AB%98%E7%BA%A7/12.%E5%87%BD%E6%95%B0%E9%AB%98%E7%BA%A7/</loc>
-    
-    <lastmod>2019-06-15T08:49:48.578Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/19/4.js%E9%AB%98%E7%BA%A7/11.js%E7%BB%A7%E6%89%BF/</loc>
-    
-    <lastmod>2019-06-15T08:49:48.578Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/15/3.jquery/1.jquery%E7%AE%80%E4%BB%8B/</loc>
-    
-    <lastmod>2019-06-15T08:39:08.113Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/19/3.jquery/7.jquery%E6%8F%92%E4%BB%B6%E5%92%8C%E5%85%B6%E4%BB%96%E6%96%B9%E6%B3%95/</loc>
-    
-    <lastmod>2019-06-15T08:39:08.113Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/16/3.jquery/6.jquery%E4%BA%8B%E4%BB%B6/</loc>
-    
-    <lastmod>2019-06-15T08:39:08.113Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/16/3.jquery/5.jquery%E5%B0%BA%E5%AF%B8%E5%92%8C%E4%BD%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/</loc>
-    
-    <lastmod>2019-06-15T08:39:08.113Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/16/3.jquery/3.jquery%E5%8A%A8%E7%94%BB/</loc>
-    
-    <lastmod>2019-06-15T08:39:08.112Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/16/3.jquery/4.jquery%E6%93%8D%E4%BD%9C/</loc>
-    
-    <lastmod>2019-06-15T08:39:08.112Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/25/5.PHP/1.PHP%E4%BB%8B%E7%BB%8D%E5%92%8C%E7%89%B9%E6%80%A7/</loc>
-    
-    <lastmod>2019-06-15T06:28:00.776Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/27/5.PHP/2.1.GET%E5%92%8CPOST%E6%96%B9%E6%B3%95/</loc>
-    
-    <lastmod>2019-06-15T06:28:00.762Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/27/5.PHP/2.2.%E9%9F%B3%E4%B9%90%E5%88%97%E8%A1%A8%E6%A1%88%E4%BE%8B/</loc>
-    
-    <lastmod>2019-06-15T06:28:00.762Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/27/5.PHP/3.PHP%E6%B3%A8%E5%86%8C%E6%A1%88%E4%BE%8B%E6%BA%90%E7%A0%81/</loc>
-    
-    <lastmod>2019-06-15T06:28:00.762Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/29/5.PHP/4.HTTP%E5%8D%8F%E8%AE%AE/</loc>
-    
-    <lastmod>2019-06-15T06:28:00.762Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/05/29/5.PHP/5.cookie%E5%92%8Csession/</loc>
-    
-    <lastmod>2019-06-15T06:28:00.762Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/06/03/7.AJAX/1.ajax%E7%BC%96%E7%A8%8B/</loc>
-    
-    <lastmod>2019-06-15T06:14:56.273Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/06/01/6.%E5%8F%A4%E6%96%87/%E5%89%8D%E8%B5%A4%E5%A3%81%E8%B5%8B/</loc>
-    
-    <lastmod>2019-06-15T06:04:10.550Z</lastmod>
     
   </url>
   
@@ -481,13 +495,6 @@
     <loc>www.shawnliu.fun/link/index.html</loc>
     
     <lastmod>2019-06-14T10:04:48.908Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.shawnliu.fun/2019/06/10/0.tips/2.%E5%89%8D%E7%AB%AF%E7%94%9F%E8%AF%8D%E6%9C%AC/</loc>
-    
-    <lastmod>2019-06-10T03:30:17.116Z</lastmod>
     
   </url>
   

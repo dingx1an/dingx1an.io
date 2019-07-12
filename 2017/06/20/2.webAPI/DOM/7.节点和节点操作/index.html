@@ -1,0 +1,102 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>节点和节点操作 | ShawnLiu</title><meta name="description" content="节点和节点操作"><meta name="keywords" content="DOM"><meta name="author" content="ShawnLiu"><meta name="copyright" content="ShawnLiu"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="canonical" href="www.shawnliu.fun/2017/06/20/2.webAPI/DOM/7.节点和节点操作/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="节点和节点操作"><meta name="twitter:description" content="节点和节点操作"><meta name="twitter:image" content="[&quot;https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/api.jpeg&quot;]"><meta property="og:type" content="article"><meta property="og:title" content="节点和节点操作"><meta property="og:url" content="www.shawnliu.fun/2017/06/20/2.webAPI/DOM/7.节点和节点操作/"><meta property="og:site_name" content="ShawnLiu"><meta property="og:description" content="节点和节点操作"><meta property="og:image" content="[&quot;https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/api.jpeg&quot;]"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="prev" title="事件高级" href="/www.shawnliu.fun/2017/06/20/2.webAPI/DOM/8.事件高级/"><link rel="next" title="自定义属性" href="/www.shawnliu.fun/2017/06/20/2.webAPI/DOM/6.自定义属性/"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://shawnliu.fun/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight_copy: 'true',
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    title: '添加书签',
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  }
+  
+}</script></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、为什么学节点操作"><span class="toc-text">一、为什么学节点操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、节点概述"><span class="toc-text">二、节点概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-什么是节点"><span class="toc-text">1.什么是节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-节点属性和分类"><span class="toc-text">2.节点属性和分类</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、节点层级"><span class="toc-text">三、节点层级</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-父节点"><span class="toc-text">1.父节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-子节点"><span class="toc-text">2.子节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-兄弟节点-使用较少"><span class="toc-text">3.兄弟节点 使用较少</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、节点操作"><span class="toc-text">四、节点操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-创建节点"><span class="toc-text">1.创建节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-添加节点"><span class="toc-text">2.添加节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-删除节点"><span class="toc-text">3.删除节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-克隆节点"><span class="toc-text">4.克隆节点</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三种动态创建元素区别"><span class="toc-text">三种动态创建元素区别</span></a></li></ol></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/api.jpeg)"><div id="page-header"><span class="pull-left"> <a class="blog_title" id="site-name" href="/">ShawnLiu</a></span><div class="open toggle-menu pull-right"><div class="menu-icon-first"></div><div class="menu-icon-second"></div><div class="menu-icon-third"></div></div><span class="pull-right menus"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友人帐</span></a><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于/留言板</span></a><a class="site-page" href="/myproject/"><i class="fa-fw fa fa-grav"></i><span> 项目</span></a><script>document.body.addEventListener('touchstart', function(){ });</script></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></span></div><div id="post-info"><div id="post-title"><div class="posttitle">节点和节点操作</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2017-06-20<span class="post-meta__separator">|</span><i class="fa fa-history" aria-hidden="true"></i> 更新于 2019-07-12</time><span class="post-meta__separator mobile_hidden">|</span><span class="mobile_hidden"><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/WebAPI/">WebAPI</a></span><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">606</span><span class="post-meta__separator">|</span><span>阅读时长: 1 分钟</span><span class="post-meta__separator">|</span><span>阅读量: </span><span id="busuanzi_value_page_pv"></span></div></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><h1 id="一、为什么学节点操作"><a href="#一、为什么学节点操作" class="headerlink" title="一、为什么学节点操作"></a>一、为什么学节点操作</h1><p>利用节点间的关系获取元素更简单，逻辑性比较强</p>
+<h1 id="二、节点概述"><a href="#二、节点概述" class="headerlink" title="二、节点概述"></a>二、节点概述</h1><h2 id="1-什么是节点"><a href="#1-什么是节点" class="headerlink" title="1.什么是节点"></a>1.什么是节点</h2><p>网页中所有内容（属性、文本、元素等）都是节点，在DOM中用node表示</p>
+<h2 id="2-节点属性和分类"><a href="#2-节点属性和分类" class="headerlink" title="2.节点属性和分类"></a>2.节点属性和分类</h2><p>nodeType节点类型 元素节点是1  属性节点是2 文本节点是3<br>nodeName节点名称<br>nodeValue节点值<br>我们主要操作的是<strong>元素节点</strong></p>
+<h1 id="三、节点层级"><a href="#三、节点层级" class="headerlink" title="三、节点层级"></a>三、节点层级</h1><p>如果没有找到节点返回null</p>
+<h2 id="1-父节点"><a href="#1-父节点" class="headerlink" title="1.父节点"></a>1.父节点</h2><pre><code>element.parentNode</code></pre><p>得到离元素最近的父亲节点（亲爸爸）</p>
+<h2 id="2-子节点"><a href="#2-子节点" class="headerlink" title="2.子节点"></a>2.子节点</h2><pre><code>element.childNodes 得到所有子节点的集合，包括所有节点类型，不提倡使用
+element.children 得到子元素节点的集合，只获得元素节点，实际常用
+element.firstChild 得到第一个子节点 .lastChild 得到最后一个子节点
+element.firstElementChild 得到第一个子元素节点  IE9以上支持
+element.lastElementChild 得到第一个子元素节点 IE9以上支持</code></pre><p>实际开发使用children加索引号选择first和last，既没有兼容性问题又能选择元素节点<br>        如第一个ul.children[0]<br>        最后一个ul.children[ul.children.length-1]</p>
+<h2 id="3-兄弟节点-使用较少"><a href="#3-兄弟节点-使用较少" class="headerlink" title="3.兄弟节点 使用较少"></a>3.兄弟节点 使用较少</h2><pre><code>node.nextSibling 下一个兄弟节点 包括所有类型
+node.previousSibling 上一个兄弟节点 包括所有类型
+node.nextElementSibling 下一个兄弟元素节点 IE9以上支持
+node.previousElementSibling 上一个兄弟元素节点 IE9以上支持</code></pre><h1 id="四、节点操作"><a href="#四、节点操作" class="headerlink" title="四、节点操作"></a>四、节点操作</h1><h2 id="1-创建节点"><a href="#1-创建节点" class="headerlink" title="1.创建节点"></a>1.创建节点</h2><pre><code>document.createElement(&apos;标签名&apos;)</code></pre><p>创建完要添加才能看到</p>
+<h2 id="2-添加节点"><a href="#2-添加节点" class="headerlink" title="2.添加节点"></a>2.添加节点</h2><pre><code>父节点.appendChild(子节点)  </code></pre><p>添加的子节点是放在父亲的末尾</p>
+<pre><code>父节点.insertBefore(&apos;要插入的节点&apos;, 子节点) </code></pre><p>添加在某个子节点之前</p>
+<h2 id="3-删除节点"><a href="#3-删除节点" class="headerlink" title="3.删除节点"></a>3.删除节点</h2><pre><code>父节点.removeChild(子节点)</code></pre><h2 id="4-克隆节点"><a href="#4-克隆节点" class="headerlink" title="4.克隆节点"></a>4.克隆节点</h2><pre><code>node.cloneNode(参数) 得到node的克隆节点</code></pre><p>参数：true 表示完全克隆，默认false 只克隆元素标签  </p>
+<h1 id="三种动态创建元素区别"><a href="#三种动态创建元素区别" class="headerlink" title="三种动态创建元素区别"></a>三种动态创建元素区别</h1><p>创建多个元素时<br><code>document.write(&#39;&lt;p&gt;&lt;/p&gt;&#39;)</code>直接将内容写入页面的内容流，但是页面加载完毕会导致页面重绘<br><code>innerHTML</code>拼接字符串时，效率比较低，采取数组形式效率很高但是结构较复杂<br><code>createElement(&#39;p&#39;)</code>创建多个元素效率稍低，但是结构更清晰</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">ShawnLiu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="/www.shawnliu.fun/2017/06/20/2.webAPI/DOM/7.节点和节点操作/">www.shawnliu.fun/2017/06/20/2.webAPI/DOM/7.节点和节点操作/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="www.shawnliu.fun">ShawnLiu</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/DOM/">DOM    </a></div><div class="post_share"><div class="social-share" data-image="[&quot;https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/api.jpeg&quot;]" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-buttom"><i class="fa fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lozad post-qr-code__img" data-src="/img/wechat.jpg"><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lozad post-qr-code__img" data-src="/img/alipay.jpg"><div class="post-qr-code__desc">支付宝</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull-left"><a href="/2017/06/20/2.webAPI/DOM/8.事件高级/"><img class="prev_cover lozad" data-src="https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/api.jpeg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">上一篇</div><div class="prev_info"><span>事件高级</span></div></a></div><div class="next-post pull-right"><a href="/2017/06/20/2.webAPI/DOM/6.自定义属性/"><img class="next_cover lozad" data-src="https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/api.jpeg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">下一篇</div><div class="next_info"><span>自定义属性</span></div></a></div></nav><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i> <span>评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = 'true' == true ? true : false;
+var verify = 'true' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+
+var localeName = 'tw',
+localeMode = {
+    head: {
+        nick: '昵称(必填)',
+        mail: '邮箱(必填,可以收到回复提醒)',
+        link: '网址(选填)',
+    },
+    tips: {
+        comments: '评论',
+        sofa: '快來做第一个评论的人吧~',
+        busy: '还在提交中，请稍候...',
+        again: '这么简单也能错，也是沒谁了.'
+    },
+    ctrl: {
+        reply: '回复',
+        ok: '好的',
+        sure: '确认',
+        cancel: '取消',
+        confirm: '确认',
+        continue: '继续',
+        more: '查看更多...',
+        try: '再试试?',
+        preview: '预览',
+        emoji: '表情'
+    },
+    error: {
+        99: '初始化失敗，请检查init中的`el`元素.',
+        100: '初始化失敗，请检查你的AppId和AppKey.',
+        401: '未经授权的操作，请检查你的AppId和AppKey.',
+        403: '访问被api域名白名单拒绝，请检查你的安全域名設置.',
+    },
+    timeago: {
+        seconds: '秒前',
+        minutes: '分钟前',
+        hours: '小时前',
+        days: '天前',
+        now: '刚刚'
+    }
+};
+
+window.valine = new Valine();
+valine.installLocale(localeName,localeMode);
+
+valine.init({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'q5bYO5Icw8iYbOAIqd4C4wYl-gzGzoHsz',
+  appKey:'oWC07CBWz2YkiLVCtCp8EGIx',
+  placeholder:'请添加评论...',
+  avatar:'mp',
+  guest_info:guest_info,
+  pageSize:'10',
+  lang:'zh-cn',
+  visitor: true
+});</script></div></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2019 By ShawnLiu</div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><section class="rightside" id="rightside"><i class="fa fa-book" id="readmode" title="阅读模式"> </i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换">繁</a><i class="fa fa-moon-o nightshift" id="nightshift" title="夜间模式"></i></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/baidupush.js"></script><script async src="/js/search/local-search.js"></script><script src="/js/nightshift.js"></script><script src="/js/tw_cn.js"></script><script>translateInitilization()
+
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@1.2.2/instantpage.min.js" type="module"></script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html><script src="/live2d-widget/autoload.js"></script>
