@@ -1,0 +1,167 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>vue语法基础 | ShawnLiu</title><meta name="description" content="vue语法基础"><meta name="keywords" content="vue"><meta name="author" content="ShawnLiu"><meta name="copyright" content="ShawnLiu"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="canonical" href="www.shawnliu.fun/2019/05/16/11.vue/vue语法基础/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="vue语法基础"><meta name="twitter:description" content="vue语法基础"><meta name="twitter:image" content="[&quot;https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/vue.jpg&quot;]"><meta property="og:type" content="article"><meta property="og:title" content="vue语法基础"><meta property="og:url" content="www.shawnliu.fun/2019/05/16/11.vue/vue语法基础/"><meta property="og:site_name" content="ShawnLiu"><meta property="og:description" content="vue语法基础"><meta property="og:image" content="[&quot;https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/vue.jpg&quot;]"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="prev" title="前端面试题汇总" href="/www.shawnliu.fun/2019/07/02/0.tips/4.前端面试题/"><link rel="next" title="Git的安装和使用" href="/www.shawnliu.fun/2019/05/15/10.git/Git/"><link rel="dns-prefetch" href="https://hm.baidu.com"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?798215fea58c60b9776a43e937252e47";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://shawnliu.fun/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight_copy: 'true',
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    title: '添加书签',
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  }
+  
+}</script></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、vue概述"><span class="toc-text">一、vue概述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、基本使用"><span class="toc-text">二、基本使用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、Vue模板语法"><span class="toc-text">三、Vue模板语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-模板语法概述"><span class="toc-text">1.模板语法概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1）前端渲染："><span class="toc-text">1）前端渲染：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2）前端渲染方式："><span class="toc-text">2）前端渲染方式：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3）语法组成概览"><span class="toc-text">3）语法组成概览</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-指令"><span class="toc-text">2.指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-v-cloak"><span class="toc-text">1) v-cloak</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-数据填充指令"><span class="toc-text">2) 数据填充指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-v-once"><span class="toc-text">3) v-once</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-双向数据绑定"><span class="toc-text">3.双向数据绑定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-事件绑定"><span class="toc-text">4. 事件绑定</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1）vue事件绑定方式"><span class="toc-text">1）vue事件绑定方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2）事件调用方式"><span class="toc-text">2）事件调用方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3）传递参数"><span class="toc-text">3）传递参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4）事件修饰符"><span class="toc-text">4）事件修饰符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5）按键修饰符"><span class="toc-text">5）按键修饰符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6）自定义按键修饰符"><span class="toc-text">6）自定义按键修饰符</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-属性绑定"><span class="toc-text">5.属性绑定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-样式绑定"><span class="toc-text">6.样式绑定</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1）class样式处理："><span class="toc-text">1）class样式处理：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2）style样式处理-行内样式-不常用"><span class="toc-text">2）style样式处理 (行内样式 不常用)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-分支循环结构"><span class="toc-text">7.分支循环结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1）分支结构"><span class="toc-text">1）分支结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2）循环结构-v-for"><span class="toc-text">2）循环结构 v-for</span></a></li></ol></li></ol></li></ol></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/vue.jpg)"><div id="page-header"><span class="pull-left"> <a class="blog_title" id="site-name" href="/">ShawnLiu</a></span><div class="open toggle-menu pull-right"><div class="menu-icon-first"></div><div class="menu-icon-second"></div><div class="menu-icon-third"></div></div><span class="pull-right menus"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友人帐</span></a><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于/留言板</span></a><a class="site-page" href="/myproject/"><i class="fa-fw fa fa-grav"></i><span> 项目</span></a><script>document.body.addEventListener('touchstart', function(){ });</script></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></span></div><div id="post-info"><div id="post-title"><div class="posttitle">vue语法基础</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2019-05-16<span class="post-meta__separator">|</span><i class="fa fa-history" aria-hidden="true"></i> 更新于 2019-07-16</time><span class="post-meta__separator mobile_hidden">|</span><span class="mobile_hidden"><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/vue/">vue</a></span><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">1.7k</span><span class="post-meta__separator">|</span><span>阅读时长: 7 分钟</span><span class="post-meta__separator">|</span><span>阅读量: </span><span id="busuanzi_value_page_pv"></span></div></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><blockquote>
+<p>渐进式js框架 <a href="https://cn.vuejs.org/v2/guide/index.html" target="_blank" rel="noopener">https://cn.vuejs.org/v2/guide/index.html</a><br>渐进式： 声明式渲染-&gt;组件系统-&gt;客户端路由-&gt;集中式状态管理vuex-&gt;项目构建</p>
+</blockquote>
+<h1 id="一、vue概述"><a href="#一、vue概述" class="headerlink" title="一、vue概述"></a>一、vue概述</h1><p>易用：熟悉HTML,CSS,JS就可以快速上手<br>灵活：在一个库和一套框架之间自如伸缩<br>高效：20kb运行大小，超快虚拟DOM</p>
+<h1 id="二、基本使用"><a href="#二、基本使用" class="headerlink" title="二、基本使用"></a>二、基本使用</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">	&lt;div&gt;&#123;&#123;msg&#125;&#125;&lt;/div&gt;</span><br><span class="line">	&lt;div&gt;&#123;&#123;1 + 2&#125;&#125;&lt;/div&gt; </span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;script src=&quot;vue.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">var vm = new Vue(&#123;</span><br><span class="line">	el: &quot;#app&quot;,</span><br><span class="line">	data: &#123; </span><br><span class="line">		msg: &quot;Hello world&quot;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>插值语法可以进行简单计算，还可以写三元表达式，但不能写if,for</li>
+<li>el是element的缩写，值为DOM元素或者CSS选择器</li>
+<li>data:模型数据，是一个对象</li>
+</ul>
+<h1 id="三、Vue模板语法"><a href="#三、Vue模板语法" class="headerlink" title="三、Vue模板语法"></a>三、Vue模板语法</h1><h2 id="1-模板语法概述"><a href="#1-模板语法概述" class="headerlink" title="1.模板语法概述"></a>1.模板语法概述</h2><h3 id="1）前端渲染："><a href="#1）前端渲染：" class="headerlink" title="1）前端渲染："></a>1）前端渲染：</h3><p><code>模板 + 数据 =&gt; 静态HTML</code></p>
+<h3 id="2）前端渲染方式："><a href="#2）前端渲染方式：" class="headerlink" title="2）前端渲染方式："></a>2）前端渲染方式：</h3><p>原生js拼接字符串：较麻烦，不同程序员代码差异性大<br>模板引擎：提供了规范语法，但没有提供事件处理机制<br>Vue模板语法解决了以上问题<br>vue默认具有数据响应式，数据变化会导致页面内容同步变化<br>数据绑定： 将数据填充到标签中</p>
+<h3 id="3）语法组成概览"><a href="#3）语法组成概览" class="headerlink" title="3）语法组成概览"></a>3）语法组成概览</h3><p>插值表达式<br>指令<br>事件绑定<br>属性绑定<br>样式绑定<br>分支循环结构</p>
+<h2 id="2-指令"><a href="#2-指令" class="headerlink" title="2.指令"></a>2.指令</h2><p>实质： 以v-开始的自定义属性<br><code>&lt;div v-cloak&gt; Hello World! &lt;/div&gt;</code></p>
+<h3 id="1-v-cloak"><a href="#1-v-cloak" class="headerlink" title="1) v-cloak"></a>1) v-cloak</h3><p>此属性保持在元素上，直到关联实例结束编译<br>给插值表达式所在的标签添加此指令(属性)，然后CSS配合<code>[v-cloak]{display:none}</code><br>可以解决插值表达式闪动的问题</p>
+<h3 id="2-数据填充指令"><a href="#2-数据填充指令" class="headerlink" title="2) 数据填充指令"></a>2) 数据填充指令</h3><p><code>v-text=&quot;msg&quot;</code> 填充纯文本 需要赋值 没有闪动问题<br><code>v-html=&quot;msg&quot;</code> 填充HTML 存在安全问题XSS攻击 第三方数据不可使用<br><code>v-pre</code> 填充原始信息 不进行编译</p>
+<h3 id="3-v-once"><a href="#3-v-once" class="headerlink" title="3) v-once"></a>3) v-once</h3><p>v-once只会编译一次，内容确定之后不会响应式变化</p>
+<h2 id="3-双向数据绑定"><a href="#3-双向数据绑定" class="headerlink" title="3.双向数据绑定"></a>3.双向数据绑定</h2><p>使用的指令：v-model<br>双向数据绑定： 数据和页面内容互相影响，同步变化。主要体现在表单输入域中<br><img src="https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/vue/v1.jpg" alt></p>
+<p><code>页面修改数据--&gt; js里面的msg也会变化;js里的msg修改了--&gt;页面数据也会变化</code></p>
+<p>MVVM思想： M:model  V: view  VM: vue提供的view-model</p>
+<h2 id="4-事件绑定"><a href="#4-事件绑定" class="headerlink" title="4. 事件绑定"></a>4. 事件绑定</h2><p>使用的指令：v-on: 简写 @</p>
+<h3 id="1）vue事件绑定方式"><a href="#1）vue事件绑定方式" class="headerlink" title="1）vue事件绑定方式"></a>1）vue事件绑定方式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;button v-on:click=&apos;事件处理逻辑&apos;&gt;点击&lt;/button&gt;</span><br><span class="line">简写：&lt;button @click=&apos;事件处理逻辑&apos;&gt;点击&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+
+<p>但是事件处理逻辑写在标签内不合适。可以通过函数的形式写在vm的methods里</p>
+<h3 id="2）事件调用方式"><a href="#2）事件调用方式" class="headerlink" title="2）事件调用方式"></a>2）事件调用方式</h3><p>绑定函数名字：<code>&lt;button @click=&#39;add&#39;&gt;点击&lt;/button&gt;</code><br>调用函数：<code>&lt;button @click=&#39;add()&#39;&gt;点击&lt;/button&gt;</code></p>
+<h3 id="3）传递参数"><a href="#3）传递参数" class="headerlink" title="3）传递参数"></a>3）传递参数</h3><p>1.如果是绑定函数名字，默认会传递一个<code>$event</code>作为第一个参数（隐式）<br>2.如果是调用函数，可以手动传递参数<code>$event</code>，只能放在最后（显式）<br>    <code>&lt;button @click=&#39;add(p1,p2,$event)&#39;&gt;点击&lt;/button&gt;</code></p>
+<p><code>此处this指向vm，可以直接拿到data里的数据</code><br><code>methods里的函数不能写箭头函数，有this指向问题</code><br><img src="https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/vue/v2.jpg" alt></p>
+<h3 id="4）事件修饰符"><a href="#4）事件修饰符" class="headerlink" title="4）事件修饰符"></a>4）事件修饰符</h3><p>阻止事件冒泡： <code>v-on:click.stop=&#39;handle&#39;</code><br>阻止默认行为： <code>v-on:click.prevent=&#39;handle&#39;</code><br>只有本身触发事件才会执行函数： <code>v-on:click.self=&#39;handle&#39;</code><br>可以链式书写，注意有顺序问题<br><code>先prevent后self  v-on:click.prevent.self 会阻止所有的点击事件</code><br><code>先self后prevent  v-on:click.self.prevent 会阻止对元素自身的点击事件</code></p>
+<h3 id="5）按键修饰符"><a href="#5）按键修饰符" class="headerlink" title="5）按键修饰符"></a>5）按键修饰符</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Tab键： .tab</span><br><span class="line">ESC键： .esc</span><br><span class="line">空格键：.space</span><br><span class="line">方向键：.up .down .left .right</span><br><span class="line">回车键：&lt;input v-on:keyup.enter=&apos;submit&apos;&gt;</span><br><span class="line">delete键：&lt;input v-on:keyup.delete=&apos;handle&apos;&gt;</span><br><span class="line">也可以直接加按键的keycode值</span><br></pre></td></tr></table></figure>
+
+<h3 id="6）自定义按键修饰符"><a href="#6）自定义按键修饰符" class="headerlink" title="6）自定义按键修饰符"></a>6）自定义按键修饰符</h3><p><code>Vue.config.keyCodes.aaa = 65 //实际上就是给按键起名字</code></p>
+<h2 id="5-属性绑定"><a href="#5-属性绑定" class="headerlink" title="5.属性绑定"></a>5.属性绑定</h2><p>使用的指令 <code>v-bind:</code> 简写 <code>:</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;a v-bind:href=&apos;url&apos;&gt;跳转&lt;/a&gt;</span><br><span class="line">&lt;a :href=&apos;url&apos;&gt;跳转&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<p>v-model双向数据绑定实现原理分析</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input v-bind:value=&quot;msg&quot; v-on:input=&quot;msg=$event.target.value&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-样式绑定"><a href="#6-样式绑定" class="headerlink" title="6.样式绑定"></a>6.样式绑定</h2><p>使用的指令 <code>v-bind:</code> 简写 <code>:</code></p>
+<h3 id="1）class样式处理："><a href="#1）class样式处理：" class="headerlink" title="1）class样式处理："></a>1）class样式处理：</h3><p>不需要进行样式动态变化时，不用写成这种形式</p>
+<ul>
+<li><p>对象形式：最常用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.active &#123; border: 1px solid #000 &#125;   //css</span><br><span class="line">&lt;div v-bind:class=&quot;&#123;active:isActive&#125;&quot;&gt;&lt;/div&gt;  //html</span><br><span class="line">data: &#123; isActive : true &#125;   //vue js</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数组形式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.active &#123; border: 1px solid #000 &#125; //css</span><br><span class="line">&lt;div v-bind:class=&quot;[activeClass]&quot;&gt;&lt;/div&gt; //html</span><br><span class="line">data: &#123; activeClass : &apos;active&apos; &#125;   //vue js</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>不会覆盖正常写法的类名<br>两种形式可以结合使用，把{}放到[]里<br>简化写法 可以把多个类名定义一个数组存储 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-bind:class=&quot;classArr&quot;&gt;&lt;/div&gt; //html</span><br><span class="line">data: &#123; classArr = [&apos;active&apos;,&apos;error&apos;] &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2）style样式处理-行内样式-不常用"><a href="#2）style样式处理-行内样式-不常用" class="headerlink" title="2）style样式处理 (行内样式 不常用)"></a>2）style样式处理 (行内样式 不常用)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-bind:style=&apos;&#123;border: borderStyle&#125;&apos;&gt;&lt;/div&gt;</span><br><span class="line">data:&#123; borderStyle:&apos;1px solid #000&apos; &#125;</span><br></pre></td></tr></table></figure>
+
+<p>当有多个样式时，可以简化写法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-bind:style=&apos;objStyles&apos;&gt;&lt;/div&gt;</span><br><span class="line">data:&#123; objStyles:&#123; border:1px solid #000, width:100px &#125; &#125;</span><br></pre></td></tr></table></figure>
+
+<p>也可以放多个对象<code>&lt;div v-bind:style=&#39;[objStyles,objStyles1]&#39;&gt;&lt;/div&gt;</code></p>
+<h2 id="7-分支循环结构"><a href="#7-分支循环结构" class="headerlink" title="7.分支循环结构"></a>7.分支循环结构</h2><h3 id="1）分支结构"><a href="#1）分支结构" class="headerlink" title="1）分支结构"></a>1）分支结构</h3><p>v-if v-else v-else-if    控制元素是否渲染 不一定在DOM里</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-if=&quot;score&gt;90&quot;&gt; 优秀 &lt;/div&gt;</span><br><span class="line">data:&#123; score: 99 &#125;</span><br></pre></td></tr></table></figure>
+
+<p>v-show 控制元素是否显示 和display作用相同 已经渲染到DOM</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-show=&apos;flag&apos;&gt;&lt;/div&gt;  //此div会隐藏</span><br><span class="line">data:&#123; flag:false &#125;</span><br></pre></td></tr></table></figure>
+
+<p>v-if和v-show都是看等号后面是true还是false，区别是if会对DOM元素进行增加删除，show只是改变display的值<br>v-show的效率高，不涉及DOM元素的增删操作</p>
+<h3 id="2）循环结构-v-for"><a href="#2）循环结构-v-for" class="headerlink" title="2）循环结构 v-for"></a>2）循环结构 v-for</h3><ul>
+<li>遍历数组 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;li :key=&apos;index&apos; v-for=&quot;(item,index) in arr&quot;&gt;&#123;&#123;item +&apos;---&apos;+ index&#125;&#125;&lt;/li&gt;</span><br><span class="line">data: &#123;arr：[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>key:唯一标识 一般是id 方便vue区分元素 提高性能 必须加上</p>
+<ul>
+<li>遍历对象 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;li :key=&apos;i&apos; v-for=&quot;(v,k,i) in obj&quot;&gt;&#123;&#123;v+&apos;---&apos;+k+&apos;---&apos;+i&#125;&#125;&lt;/li&gt;</span><br><span class="line">data: &#123;obj：&#123;name:&quot;liu&quot;,age:18&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>v:值 liu,18<br>k:键 name,age<br>i:索引 0,1</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">ShawnLiu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="/www.shawnliu.fun/2019/05/16/11.vue/vue语法基础/">www.shawnliu.fun/2019/05/16/11.vue/vue语法基础/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="www.shawnliu.fun">ShawnLiu</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/vue/">vue    </a></div><div class="post_share"><div class="social-share" data-image="[&quot;https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/vue.jpg&quot;]" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-buttom"><i class="fa fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lozad post-qr-code__img" data-src="/img/wechat.jpg"><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lozad post-qr-code__img" data-src="/img/alipay.jpg"><div class="post-qr-code__desc">支付宝</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull-left"><a href="/2019/07/02/0.tips/4.前端面试题/"><img class="prev_cover lozad" data-src="https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/background/bz6.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">下一篇</div><div class="prev_info"><span>前端面试题汇总</span></div></a></div><div class="next-post pull-right"><a href="/2019/05/15/10.git/Git/"><img class="next_cover lozad" data-src="https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/git/git.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">上一篇</div><div class="next_info"><span>Git的安装和使用</span></div></a></div></nav><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i> <span>评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = 'true' == true ? true : false;
+var verify = 'true' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+
+var localeName = 'tw',
+localeMode = {
+    head: {
+        nick: '昵称(必填)',
+        mail: '邮箱(必填,可以收到回复提醒)',
+        link: '网址(选填)',
+    },
+    tips: {
+        comments: '评论',
+        sofa: '快來做第一个评论的人吧~',
+        busy: '还在提交中，请稍候...',
+        again: '这么简单也能错，也是沒谁了.'
+    },
+    ctrl: {
+        reply: '回复',
+        ok: '好的',
+        sure: '确认',
+        cancel: '取消',
+        confirm: '确认',
+        continue: '继续',
+        more: '查看更多...',
+        try: '再试试?',
+        preview: '预览',
+        emoji: '表情'
+    },
+    error: {
+        99: '初始化失敗，请检查init中的`el`元素.',
+        100: '初始化失敗，请检查你的AppId和AppKey.',
+        401: '未经授权的操作，请检查你的AppId和AppKey.',
+        403: '访问被api域名白名单拒绝，请检查你的安全域名設置.',
+    },
+    timeago: {
+        seconds: '秒前',
+        minutes: '分钟前',
+        hours: '小时前',
+        days: '天前',
+        now: '刚刚'
+    }
+};
+
+window.valine = new Valine();
+valine.installLocale(localeName,localeMode);
+
+valine.init({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'q5bYO5Icw8iYbOAIqd4C4wYl-gzGzoHsz',
+  appKey:'oWC07CBWz2YkiLVCtCp8EGIx',
+  placeholder:'请添加评论...',
+  avatar:'monsterid',
+  guest_info:guest_info,
+  pageSize:'10',
+  lang:'zh-cn',
+  visitor: true
+});</script></div></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2019 By ShawnLiu</div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><section class="rightside" id="rightside"><i class="fa fa-book" id="readmode" title="阅读模式"> </i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换">繁</a><i class="fa fa-moon-o nightshift" id="nightshift" title="夜间模式"></i></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/baidupush.js"></script><script async src="/js/search/local-search.js"></script><script src="/js/nightshift.js"></script><script src="/js/tw_cn.js"></script><script>translateInitilization()
+
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@1.2.2/instantpage.min.js" type="module"></script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html><script src="/live2d-widget/autoload.js"></script>
