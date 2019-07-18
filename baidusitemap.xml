@@ -2,7 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>www.shawnliu.fun/2019/05/18/11.vue/2.vue%E5%B8%B8%E7%94%A8%E7%89%B9%E6%80%A7/</loc>
-    <lastmod>2019-07-16</lastmod>
+    <lastmod>2019-07-18</lastmod>
+  </url>  <url>
+    <loc>www.shawnliu.fun/2019/06/28/0.tips/6.%E5%89%8D%E7%AB%AF%E4%BC%98%E5%8C%9614%E6%9D%A1/</loc>
+    <lastmod>2019-07-18</lastmod>
   </url>  <url>
     <loc>www.shawnliu.fun/2019/05/16/11.vue/1.vue%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2019-07-16</lastmod>
@@ -13,13 +16,10 @@
     <loc>www.shawnliu.fun/2019/05/13/9.nodeJs/2.ES6%E8%AF%AD%E6%B3%95/</loc>
     <lastmod>2019-07-16</lastmod>
   </url>  <url>
-    <loc>www.shawnliu.fun/2018/05/25/5.PHP/1.PHP%E4%BB%8B%E7%BB%8D%E5%92%8C%E7%89%B9%E6%80%A7/</loc>
+    <loc>www.shawnliu.fun/2018/06/01/5.PHP/6.MySQL/</loc>
     <lastmod>2019-07-15</lastmod>
   </url>  <url>
     <loc>www.shawnliu.fun/2017/05/13/1.js%E5%9F%BA%E7%A1%80/1.%E5%8F%98%E9%87%8F%E5%92%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</loc>
-    <lastmod>2019-07-15</lastmod>
-  </url>  <url>
-    <loc>www.shawnliu.fun/2018/06/01/5.PHP/6.MySQL/</loc>
     <lastmod>2019-07-15</lastmod>
   </url>  <url>
     <loc>www.shawnliu.fun/2017/06/20/2.webAPI/%E7%BD%91%E9%A1%B5%E7%89%B9%E6%95%88%E6%A1%88%E4%BE%8B/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%BD%91%E9%A1%B5%E7%89%B9%E6%95%88%E6%A1%88%E4%BE%8B/</loc>
@@ -28,10 +28,13 @@
     <loc>www.shawnliu.fun/2017/06/20/2.webAPI/%E7%BD%91%E9%A1%B5%E7%89%B9%E6%95%88%E6%A1%88%E4%BE%8B/PC%E7%AB%AF%E7%BD%91%E9%A1%B5%E7%89%B9%E6%95%88%E6%A1%88%E4%BE%8B/</loc>
     <lastmod>2019-07-15</lastmod>
   </url>  <url>
+    <loc>www.shawnliu.fun/2017/06/20/2.webAPI/BOM/5.JS%E5%8A%A8%E7%94%BB%E5%87%BD%E6%95%B0/</loc>
+    <lastmod>2019-07-15</lastmod>
+  </url>  <url>
     <loc>www.shawnliu.fun/2017/06/20/2.webAPI/BOM/4.JS%E7%9A%84%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6/</loc>
     <lastmod>2019-07-15</lastmod>
   </url>  <url>
-    <loc>www.shawnliu.fun/2017/06/20/2.webAPI/BOM/5.JS%E5%8A%A8%E7%94%BB%E5%87%BD%E6%95%B0/</loc>
+    <loc>www.shawnliu.fun/2018/05/25/5.PHP/1.PHP%E4%BB%8B%E7%BB%8D%E5%92%8C%E7%89%B9%E6%80%A7/</loc>
     <lastmod>2019-07-15</lastmod>
   </url>  <url>
     <loc>www.shawnliu.fun/2017/06/20/2.webAPI/DOM/1.API%E5%92%8CDOM%E6%A6%82%E5%BF%B5/</loc>
@@ -61,10 +64,10 @@
     <loc>www.shawnliu.fun/2018/07/03/7.AJAX/1.ajax%E7%BC%96%E7%A8%8B/</loc>
     <lastmod>2019-07-15</lastmod>
   </url>  <url>
-    <loc>www.shawnliu.fun/2017/12/20/4.js%E9%AB%98%E7%BA%A7/12.%E5%87%BD%E6%95%B0%E9%AB%98%E7%BA%A7/</loc>
+    <loc>www.shawnliu.fun/2017/05/13/1.js%E5%9F%BA%E7%A1%80/6.%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E9%A2%84%E8%A7%A3%E6%9E%90/</loc>
     <lastmod>2019-07-15</lastmod>
   </url>  <url>
-    <loc>www.shawnliu.fun/2017/05/13/1.js%E5%9F%BA%E7%A1%80/6.%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E9%A2%84%E8%A7%A3%E6%9E%90/</loc>
+    <loc>www.shawnliu.fun/2017/12/20/4.js%E9%AB%98%E7%BA%A7/12.%E5%87%BD%E6%95%B0%E9%AB%98%E7%BA%A7/</loc>
     <lastmod>2019-07-15</lastmod>
   </url>  <url>
     <loc>www.shawnliu.fun/2017/08/02/3.jquery/6.jquery%E4%BA%8B%E4%BB%B6/</loc>
