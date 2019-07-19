@@ -56,6 +56,81 @@
     
     
     <entry>
+      <title>接口调用-fetch用法</title>
+      <link href="/2019/05/21/11.vue/5.%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8-fetch%E7%94%A8%E6%B3%95/"/>
+      <url>/2019/05/21/11.vue/5.%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8-fetch%E7%94%A8%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-特性"><a href="#1-特性" class="headerlink" title="1.特性"></a>1.特性</h2><p>fetch是原生JS基于promise实现的数据获取方式，功能更强大、灵活</p><h2 id="2-基本语法"><a href="#2-基本语法" class="headerlink" title="2.基本语法"></a>2.基本语法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">'url'</span>).then(funciton(data)&#123;</span><br><span class="line"><span class="keyword">return</span> data.text(); <span class="comment">//data.text是一个promise实例</span></span><br><span class="line">&#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(data) <span class="comment">//这里才是实际的数据</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h2 id="3-fetch响应结果"><a href="#3-fetch响应结果" class="headerlink" title="3.fetch响应结果"></a>3.fetch响应结果</h2><p>fetch的第一个then里的返回结果不止有data.text()，还有data.json()更常用<br>注意后台返回结果时，使用<code>res.json({uname:&quot;lx&quot;,age:18})</code>，不再是res.send</p><h2 id="4-fetch传递参数"><a href="#4-fetch传递参数" class="headerlink" title="4.fetch传递参数"></a>4.fetch传递参数</h2><p>method默认是get</p><h3 id="1）GET-DELETE请求："><a href="#1）GET-DELETE请求：" class="headerlink" title="1）GET/DELETE请求："></a>1）GET/DELETE请求：</h3><ul><li><p>传统URL:</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">'url?id=1'</span>,&#123;</span><br><span class="line">method:<span class="string">'get/delete'</span></span><br><span class="line">&#125;).then...          注意后台接收使用/url  req.query.id</span><br></pre></td></tr></table></figure></li><li><p>Restful URL:</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">'url/1'</span>,&#123;</span><br><span class="line">method:<span class="string">'get/delete'</span></span><br><span class="line">&#125;).then...          注意后台接收使用/url/:id  req.params.id</span><br></pre></td></tr></table></figure></li></ul><h3 id="2）POST请求："><a href="#2）POST请求：" class="headerlink" title="2）POST请求："></a>2）POST请求：</h3><p>两种参数传递格式，对应两种方式</p><ul><li><p>方式1 urlencoded：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">'url'</span>,&#123;</span><br><span class="line">method:<span class="string">'post'</span>,</span><br><span class="line">body:<span class="string">'name=lx&amp;age=18'</span>,</span><br><span class="line">headers: &#123;</span><br><span class="line"> <span class="string">'Content-Type'</span>:<span class="string">'application/x-www-form-urlencoded'</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;).then...          注意后台接收使用bodyParser  req.body.uname</span><br></pre></td></tr></table></figure></li><li><p>方式2 json</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">fetch(&apos;url&apos;,&#123;</span><br><span class="line">method:&apos;post&apos;,</span><br><span class="line">body:JSON.stringify(&#123;</span><br><span class="line">uname:&apos;lx&apos;,</span><br><span class="line">age:18</span><br><span class="line">&#125;),</span><br><span class="line">headers: &#123;</span><br><span class="line"> &apos;Content-Type&apos;:&apos;application/json&apos;</span><br><span class="line">&#125;</span><br><span class="line">&#125;).then...          注意后台接收使用bodyParser  req.body.uname</span><br></pre></td></tr></table></figure></li></ul><h3 id="3）PUT请求"><a href="#3）PUT请求" class="headerlink" title="3）PUT请求"></a>3）PUT请求</h3><p>和POST类似，url后面加上要修改的id即可。也支持两种形式的参数</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>promise语法</title>
+      <link href="/2019/05/20/11.vue/4.promise%E8%AF%AD%E6%B3%95/"/>
+      <url>/2019/05/20/11.vue/4.promise%E8%AF%AD%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一、前后端交互模式"><a href="#一、前后端交互模式" class="headerlink" title="一、前后端交互模式"></a>一、前后端交互模式</h1><h2 id="1-接口调用方式"><a href="#1-接口调用方式" class="headerlink" title="1.接口调用方式"></a>1.接口调用方式</h2><p>原生ajax，基于jq的ajax，原生js新方法fetch，第三方封装的axios</p><h2 id="2-URL地址格式"><a href="#2-URL地址格式" class="headerlink" title="2.URL地址格式"></a>2.URL地址格式</h2><ul><li>传统形式：<br>  <code>schema://host:port/path?query#fragment</code></li><li>Restful形式：<br>根据HTTP提交方式区分 get/post/put/delete<br><code>使用</code>/参数<code>传递参数：http://www.shanwliu.fun/books/123</code></li></ul><h1 id="二、promise"><a href="#二、promise" class="headerlink" title="二、promise"></a>二、promise</h1><h2 id="1-为什么要使用promise"><a href="#1-为什么要使用promise" class="headerlink" title="1.为什么要使用promise"></a>1.为什么要使用promise</h2><p>ajax发送请求是异步的，不能确定请求发送的顺序，如果需要按照顺序发送，可以使用多层嵌套ajax解决，但是会形成<code>回调地狱</code><br>Promise 是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。它由社区最早提出和实现，ES6 将其写进了语言标准，统一了用法，原生提供了Promise对象。</p><h2 id="2-语法"><a href="#2-语法" class="headerlink" title="2.语法"></a>2.语法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve,reject</span>)</span>&#123;</span><br><span class="line"><span class="comment">//promise里面可以写任何代码，一般写ajax</span></span><br><span class="line">$.ajax(&#123;</span><br><span class="line">type:<span class="string">""</span>,</span><br><span class="line">url:<span class="string">""</span>,</span><br><span class="line">success:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">resolve(data)</span><br><span class="line">&#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//resolve() 是成功的回调，reject() 是失败的回调</span></span><br><span class="line">&#125;)</span><br><span class="line">p.then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;) <span class="comment">//第一个是resolve,第二个是reject</span></span><br><span class="line"><span class="comment">//必须使用then才能拿到结果</span></span><br></pre></td></tr></table></figure><h2 id="3-promise其他方法："><a href="#3-promise其他方法：" class="headerlink" title="3.promise其他方法："></a>3.promise其他方法：</h2><p>实例的方法：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p.catch(function()&#123; console.log(&quot;promise发生异常&quot;) &#125;)</span><br><span class="line">p.finally(function()&#123; console.log(&quot;不管结果如何都会执行&quot;)&#125;)</span><br></pre></td></tr></table></figure><p>Promise的方法：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Promise</span>.all([p1,p2,p3]).then(<span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;&#125;) <span class="comment">//集合多个promise对象的返回结果</span></span><br><span class="line"><span class="built_in">Promise</span>.race([p1,p2,p3]).then(<span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;&#125;) <span class="comment">//只要拿到一个promise对象的结果就返回</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>vue组件化开发</title>
+      <link href="/2019/05/19/11.vue/3.%E7%BB%84%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/"/>
+      <url>/2019/05/19/11.vue/3.%E7%BB%84%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一、组件化开发思想"><a href="#一、组件化开发思想" class="headerlink" title="一、组件化开发思想"></a>一、组件化开发思想</h1><h2 id="1-现实中的组件化思想"><a href="#1-现实中的组件化思想" class="headerlink" title="1.现实中的组件化思想"></a>1.现实中的组件化思想</h2><p>标准、分治、重用、组合</p><h2 id="2-编程中的组件化思想"><a href="#2-编程中的组件化思想" class="headerlink" title="2.编程中的组件化思想"></a>2.编程中的组件化思想</h2><p>组件就是将一段UI样式和其对应的功能作为独立的整体去看待，无论这个整体放在哪里去使用，它都具有一样的功能和样式，从而实现复用，这种整体化的思想就是组件化</p><h2 id="3-组件化规范web-components"><a href="#3-组件化规范web-components" class="headerlink" title="3.组件化规范web components"></a>3.组件化规范web components</h2><p>目的：尽可能多的重用代码<br>通过创建封装好功能的定制元素解决组件化不容易实现的问题<br>vue部分实现了上述规范<br>根组件：new Vue可以看做一个最大的组件 app</p><h1 id="二、组件注册"><a href="#二、组件注册" class="headerlink" title="二、组件注册"></a>二、组件注册</h1><h2 id="1-全局注册"><a href="#1-全局注册" class="headerlink" title="1.全局注册"></a>1.全局注册</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Vue.component(组件名称, &#123;</span><br><span class="line">data: 组件数据</span><br><span class="line">template: 组件模板内容</span><br><span class="line">methods: &#123;&#125;，</span><br><span class="line">...</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><ul><li>1.组件命名方式使用 小写字母+短横线 或者 驼峰式<br>如果使用驼峰式，只能在模板内容里使用驼峰式<br>但是在vue容器里使用，只能用短横线形式 最好只用短横线</li><li>2.组件数据是一个函数 要return一个对象，对象里写数据</li><li>3.组件模板内容是一个字符串，根元素只能有一个<br>支持插值表达式<br>支持ES6模板字符串``增加可读性</li></ul><p>用法： 写在vue容器里，当做普通标签使用</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">组件名称</span>&gt;</span><span class="tag">&lt;/<span class="name">组件名称</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><p>可以重复使用，并且每个组件的数据是独立的</p><h2 id="2-局部组件注册"><a href="#2-局部组件注册" class="headerlink" title="2.局部组件注册"></a>2.局部组件注册</h2><p>写在vue的实例里，只能在注册它的父组件里使用</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">components: &#123;</span><br><span class="line"><span class="string">'组件名称'</span> ： 组件内容</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>组件内容可以在外部用对象的形式定义</p><h1 id="三、组件间数据传递"><a href="#三、组件间数据传递" class="headerlink" title="三、组件间数据传递"></a>三、组件间数据传递</h1><h2 id="1-父子和兄弟组件"><a href="#1-父子和兄弟组件" class="headerlink" title="1.父子和兄弟组件"></a>1.父子和兄弟组件</h2><p>父组件： <code>#app</code><br>子组件： 自己定义的组件<br>兄弟组件：子组件之间互称为兄弟组件<br>可以传递任何类型的值</p><h2 id="2-父组件向子组件传值"><a href="#2-父组件向子组件传值" class="headerlink" title="2.父组件向子组件传值"></a>2.父组件向子组件传值</h2><p>子组件用props接收父组件传递过来的数据，props是一个数组；<br>父组件在标签里用 <code>属性=&#39;属性值&#39;</code> 的形式传递，可以使用v-bind动态绑定<br><img src="https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/vue/vuezujian1.jpg" alt></p><p>结果：<br><img src="https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/vue/vuezujian2.jpg" alt></p><h2 id="3-子组件向父组件传值："><a href="#3-子组件向父组件传值：" class="headerlink" title="3.子组件向父组件传值："></a>3.子组件向父组件传值：</h2><p>props传递数据是单向数据流，不能实现从子到父传值，使用自定义事件实现<br>父组件在使用子组件时，给标签绑定自定义事件<br>        <code>@自定义事件=&#39;父组件自己的函数&#39;</code><br>子组件 在自己的普通事件里<br>        <code>this.$emit(&#39;父自定义事件名称&#39;,参数)</code><br><img src="https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/vue/vuezujian3.jpg" alt></p><h2 id="4-兄弟组件之间传值"><a href="#4-兄弟组件之间传值" class="headerlink" title="4.兄弟组件之间传值"></a>4.兄弟组件之间传值</h2><p>通过事件中心交互<br><code>var hub = new Vue()</code><br>监听事件：<code>$on(&#39;事件名称&#39;，触发函数)</code><br>销毁事件：<code>$off(&#39;事件名称&#39;)</code><br>触发事件：<code>$emit(&#39;事件名称&#39;，可选参数)</code></p><h2 id="5-组件插槽"><a href="#5-组件插槽" class="headerlink" title="5.组件插槽"></a>5.组件插槽</h2><p>在使用组件时，之前标签内没有写值，如果要写内容并传递，需要使用组件插槽<br>1）基本使用<br>slot标签<code>&lt;slot&gt;&lt;/slot&gt;</code>写在子组件的模板中 ；<br>使用组件时在标签之间填写内容</p><p>2）具名插槽<br><img src="https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/vue/vuechacao1.jpg" alt><br>解析出来是<code>&lt;header&gt;</code>标签和<code>&lt;footer&gt;</code>标签<br>3）作用域插槽<br>父组件对子组件的内容进行加工和处理<br><img src="https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/vue/vuechacao2.jpg" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vue常用特性</title>
       <link href="/2019/05/18/11.vue/2.vue%E5%B8%B8%E7%94%A8%E7%89%B9%E6%80%A7/"/>
       <url>/2019/05/18/11.vue/2.vue%E5%B8%B8%E7%94%A8%E7%89%B9%E6%80%A7/</url>
