@@ -49,3 +49,6 @@ $('#usernick2').text(data.participatorNick);
 //     $('#playbtn').show();
 //     // $('video')[0].play()
 // })
+$('#downloadbtn').on('click', function () {
+    location.href = 'http://appdown.push2talk.cn/appdownload.html'
+})
