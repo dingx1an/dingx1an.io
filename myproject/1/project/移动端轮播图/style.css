@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.focus {
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 8px 2px #fff;
+}
+
+
+.focus ul {
+    width: 500%;
+    overflow: hidden;
+    margin-left: -100%;
+    /* 不使用定位距离移动ul。ul不用加定位，这样focus可以检测到高度 */
+    /* position: absolute; */
+
+}
+
+.focus ul li {
+    width: 20%;
+    float: left;
+}
+
+.focus ul li img {
+    width: 100%;
+}
+
+ol {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    z-index: 6;
+}
+
+ol li {
+    float: left;
+    width: 6px;
+    height: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    margin: 0 3px;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 6;
+    transition: all .3s;
+
+}
+
+.current {
+    background-color: #fff;
+    width: 15px;
+}

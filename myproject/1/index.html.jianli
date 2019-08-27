@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>shawn简历</title>
+	<link rel="stylesheet" href="css/mystyle.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/fontAwesome/css/font-awesome.min.css">
+	<script src="js/flexible.js"></script>
+	<script src="js/index.js"></script>
+
+</head>
+
+<body>
+
+
+	<!-- <div class="project">
+		<a href=javascript:; class="goback">返回主页</a>
+		<div class='myfile'>
+			<header>
+				<img src="https://blog-1259330568.cos.ap-shanghai.myqcloud.com/personal/avatar.jpg" alt="">
+				<div>
+					<h3>刘啸</h3>
+					<h5><span>男</span>|<span>23岁</span>|<span>2年经验</span>|<span>本科</span>|<span>17368548357</span>|
+						<span>liuxiao8052@outlook.com</span>|<span>web前端开发工程师</span></h5>
+					<p>个人技术博客：http://shawnliu.fun</p>
+				</div>
+			</header>
+			<main>
+				<aside>
+					<nav class="hope">求职意向</nav>
+					<nav class="edu">教育背景</nav>
+					<nav class="job">工作经历</nav>
+					<nav class="skill">主要技能</nav>
+					<nav class="pro">项目经历</nav>
+					<nav class="comment">自我评价</nav>
+				</aside>
+				<article>
+					<div class="con hopec">
+						<i class="fa fa-fire"></i><span>web前端开发</span>
+						<i class="fa fa-fire"></i><span>薪资：面议</span>
+						<i class="fa fa-fire"></i><span>地点：南京市</span>
+						<span class="fr">一周内到岗</span><i class="fa fa-fire fr"></i>
+					</div>
+					<div class="con educ">
+						<div class="title">
+							<span class="date">2013.09-2017.06</span>
+							<span>江南大学</span>
+							<span class="fr">本科-计算机科学与技术专业</span>
+						</div>
+
+					</div>
+					<div class="con jobc">
+						<div class='title'>
+							<span class="date">2018.11-2019.07</span>
+							<span>南京麦轩网络科技有限公司</span>
+							<span class="fr">web前端开发工程师</span>
+						</div>
+						<div class='content'>
+							<p>公司介绍：</p>
+							<p>南京麦轩网络科技有限公司是由一支从事互联网行业多年的电商精英团队于2014年7月初创办成立，旨在为中小企业提供整体电商战略规划和运营方案，着力打造电商全程整合价值链，目前已经获得阿里巴巴的授权代理。
+							</p>
+							<p>工作内容：</p>
+							<p>1、根据产品高保真开发前端页面，在任务期限内完成预定目标</p>
+							<p>2、熟练使用组件化、模块化开发方式</p>
+							<p>3、根据效果图无差别还原前端展示效果和交互功能</p>
+						</div>
+						<div class='title'>
+							<span class="date">2017.06-2018.10</span>
+							<span>软通动力信息技术服务有限公司</span>
+							<span class="fr">web前端开发工程师</span>
+						</div>
+						<div class='content'>
+							<p>公司介绍：</p>
+							<p>软通动力是中国领先的创新型技术服务商。业务范围涵盖咨询及解决方案、IT 服务及业务流程外包服务等，
+								是高科技、通信、银行/企业金融/保险、能源/交通/公用事业等行业重要的IT综合服务提供商和战略合作伙伴。
+							</p>
+							<p>工作内容：</p>
+							<p>1、根据客户需求，参与需求分析，书写开发设计文档。</p>
+							<p>2、前台页面和网页特效独立开发。</p>
+							<p>3、使用多种前端技术配合后台开发人员实现数据的渲染和CRUD操作</p>
+						</div>
+					</div>
+					<div class="con skillc">
+						<div class="content">
+							<p>1、精确还原设计图，熟练使用HTML5、CSS3完成符合W3C标准的pc端和移动端页面；</p>
+							<p>2、熟悉使用前端流行框架Vue,能够使用router,vuex,axios,element-ui等进行项目开发；</p>
+							<p>3、熟悉小程序、公众号的开发；</p>
+							<p>4、熟练掌握使用JavaScript、Jquery进行DOM和BOM操作;</p>
+							<p>5、熟练使用Ajax，运用art-template模板引擎实现页面渲染，实现前后台数据交互；</p>
+							<p>6、熟练使用Swiper、Bootstrap、MUI等前端开发框架；</p>
+							<p>7、熟练使用less进行css预处理语言编写样式；</p>
+							<p>8、熟悉es6语法新特性，了解Node.js；</p>
+							<p>9、了解js原型链、闭包、作用域等；</p>
+							<p>10、了解git版本控制系统，与多人协同开发；</p>
+						</div>
+					</div>
+					<div class="con projectc">
+						<div class='title'>
+							<span class="date">2019.03-2019.07</span>
+							<span>宜品商城</span>
+
+						</div>
+						<div class='content'>
+							<p>项目介绍：“宜品商城”是华商创展（中国）有限公司旗下大型新式C2M电子商城。涵盖百种品类，上千品牌，100%正品。</p>
+							<p>工作内容：</p>
+							<p> <span></span> 使用Vue-cli 快速搭建单页应用</p>
+							<p> <span></span> 使用Vue-Router实现单页面路由跳转</p>
+							<p> <span></span> Axios 基于 Promise 对象，实现 Ajax 请求</p>
+							<p> <span></span> 使用Vuex 进行集中式状态管理</p>
+							<p> <span></span> Less CSS 预处理</p>
+							<p> <span></span> IconFont 矢量图标</p>
+							<p> <span></span> Better-Scroll 实现页面滚动</p>
+							<p> <span></span> Vue-Infinite-Scroll 实现上拉加载Vue-Lazyloay 实现图片懒加载</p>
+
+						</div>
+
+						<div class='title'>
+							<span class="date">2018.11 - 2019.02</span>
+							<span>路客（移动端） http://m.localhome.cn/m/</span>
+
+						</div>
+						<div class='content'>
+							<p>项目介绍：Locals路客”定位于精品民宿互联网分享平台，致力于打造最具当地特色和当地文化的精品民宿。</p>
+							<p>工作内容：</p>
+							<p> <span></span> 使用 vue-cli 创建一个基本的框架</p>
+							<p> <span></span> 使用 axios 获取后台数据 配合 mint-ui 动态渲染页面</p>
+							<p> <span></span> 利用 Vue-router 和父子组件的传值实现页面的切换； </p>
+							<p> <span></span> 使用 c3 一些动画效果美化页面 提高用户体验</p>
+							<p> <span></span> 使用 mint-ui 里面的懒加载完成商品列表滑动加载</p>
+							<p> <span></span> 利用 vuex 存储数据 实现不同组件之间数据的获取</p>
+							<p> <span></span> 使用双向数据绑定实现民宿搜索</p>
+						</div>
+
+						<div class='title'>
+							<span class="date">2018.05 - 2018.10</span>
+							<span>华为AC-DCN网络拓扑页面开发（版本迭代）</span>
+
+						</div>
+						<div class='content'>
+							<p>项目介绍：获取设备之间的连接状态，用网络拓扑图的形式展示在页面上。并且用户可以对拓扑图进行编辑，包括修改连线和位置，实现对真实设备的同步操作。</p>
+							<p>工作内容：展示交换机、路由器等设备间的网络拓扑，以及实现拓扑图的编辑逻辑。</p>
+							<p>使用的主要技术：由于是迭代开发，主要技术还是采取项目原有的开发技术</p>
+							<p> <span></span> PC端布局，主要采用百分比+bootstrap栅格</p>
+							<p> <span></span> 数据交互使用Ajax</p>
+							<p> <span></span> Js类库使用jQuery </p>
+							<p> <span></span> UI框架使用Bootstrap</p>
+						</div>
+
+						<div class='title'>
+							<span class="date">2018.01 - 2018.04</span>
+							<span>华为远程实验室健康检查系统</span>
+
+						</div>
+						<div class='content'>
+							<p>项目介绍：华为开发者社区远程实验室的设备健康检查系统</p>
+							<p>工作内容：负责网络设备后台管理系统的页面开发；获取设备信息进行展示；配合后台人员实现健康检查结果的CRUD操作</p>
+							<p>使用的主要技术：由于是迭代开发，主要技术还是采取项目原有的开发技术</p>
+							<p> <span></span> PC端布局，主要采用百分比+bootstrap栅格</p>
+							<p> <span></span> 数据交互使用Ajax</p>
+							<p> <span></span> Js类库使用jQuery </p>
+							<p> <span></span> UI框架使用Bootstrap</p>
+						</div>
+						<div class='title'>
+							<span class="date">2017.06 - 2017.12</span>
+							<span>华为DCN项目集群商业wifi项目</span>
+
+						</div>
+						<div class='content'>
+							<p>项目介绍：移动端WiFi连接页面开发</p>
+							<p>工作内容：负责移动端wifi连接界面开发，包括页面布局、登录验证、广告展示、性能优化等</p>
+							<p>使用的主要技术：由于是迭代开发，主要技术还是采取项目原有的开发技术</p>
+							<p> <span></span>布局采用flex+rem方案</p>
+							<p> <span></span>数据交互使用Ajax</p>
+							<p> <span></span>Js类库使用Zepto</p>
+							<p> <span></span>广告轮播使用Swiper</p>
+						</div>
+					</div>
+					<div class="con commentc content">
+						<p> ● 个性活泼开朗，能够积极融洽的处理好和同事之间的关系；</p>
+						<p> ● 具有良好的学习能力和独立思考能力，能够吃苦；</p>
+						<p> ● 能快速适应工作环境，具备良好的沟通能力、团队协作能力，可以快速融入团队；</p>
+						<p> ● 积极向上、做事认真负责，有细心和耐心，善于总结、待人友好，为人诚实谦虚；</p>
+						<p> ● 对前端新技术感兴趣，保持终身学习的习惯</p>
+					</div>
+				</article>
+			</main>
+			<footer></footer>
+		</div>
+	</div> -->
+</body>
+
+
+</html>
