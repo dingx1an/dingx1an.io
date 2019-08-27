@@ -41,11 +41,11 @@ $('.firstp').text(data.topicDesc);
 $('.infotitle').text(data.topicName);
 $('#usernick1').text(data.ownerNick);
 $('#usernick2').text(data.participatorNick);
-$('#playbtn').on('click', function () {
-    $(this).hide();
-    $('video')[0].play()
-})
-$('video').on('pause', function () {
-    $('#playbtn').show();
-    // $('video')[0].play()
-})
+// $('#playbtn').on('click', function () {
+//     $(this).hide();
+//     $('video')[0].play()
+// })
+// $('video').on('pause', function () {
+//     $('#playbtn').show();
+//     // $('video')[0].play()
+// })
