@@ -18,7 +18,7 @@ var data = {
     "topicName": "发福的猫",
     "topicId": 99,
     "previewUrl": 'http://vod.xinghestory.com.cn/e55be1f5296f4ea78668b6e189393c6d/snapshots/05a36121f62a46c19b19d1cbc91ff606-00003.jpg',
-    "mediaUrl": 'http://vod.xinghestory.com.cn/sv/129830bf-16ccdd3505e/129830bf-16ccdd3505e.mp4',
+    "mediaUrl": 'http://vod.xinghestory.com.cn/sv/fa7520f-16cdca0c15f/fa7520f-16cdca0c15f.mp4',
     "mediaType": "VIDEO",
     "topicDesc": "【怪物史莱克】史莱克来找菲奥娜，在房间里遇到了发福变肥的猫，史莱克完全不敢相信这是他原来认识的猫。",
     "categoryId": 17,
@@ -42,8 +42,8 @@ $('.firstp').text(data.topicDesc);
 $('.infotitle').text(data.topicName);
 $('#usernick1').text(data.ownerNick);
 $('#usernick2').text(data.participatorNick);
-$('video').attr('src',data.mediaUrl);
-$('video').attr('poster',data.previewUrl);
+$('video').attr('src', data.mediaUrl);
+// $('video').attr('poster', data.previewUrl);
 $('#downloadbtn').on('click', function () {
     location.href = sharelink;
 })
