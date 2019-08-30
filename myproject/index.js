@@ -33,7 +33,7 @@ var data = {
     "isFinished": 0,
     "videoId": null
 }
-var sharelink = 'http://appdown.push2talk.cn/appdownload.html'
+var sharelink = 'https://sj.qq.com/myapp/detail.htm?apkName=com.kids.interkids'
 //ajax获取到作品信息 更改页面数据
 $('.avatar1').attr('src', data.ownerAvatar);
 $('.avatar2').attr('src', data.participatorAvatar);
